@@ -4,11 +4,16 @@
   _overflow: hidden;
 }
 
+.main-bold {
+  font-weight: bold;
+}
+
 /*header style*/
 header {
   width: 100%;
   height: 65px;
-  background: red;
+  background: #fff;
+  overflow: hidden;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,40 +24,132 @@ header .logo {
   background: chartreuse;
 }
 header nav {
-  width: 60%;
+  width: 40%;
   height: 100%;
   background: yellow;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-header nav ul {
+header nav .nav-tabs {
+  width: 75%;
   height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-header nav ul li {
-  width: 12.5%;
+header nav .nav-tabs li {
+  width: 20%;
   height: 100%;
   height: auto;
   text-align: center;
 }
-header nav ul li > a {
+header nav .nav-tabs li > a {
   display: block;
   width: 100%;
-  padding: 17% 0;
+  height: 100%;
+  padding: 26px 0;
   background: cornflowerblue;
 }
+header nav .nav-icon {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav .nav-icon li {
+  width: 33.33%;
+  height: 100%;
+  height: auto;
+  text-align: center;
+}
+header nav .nav-icon li > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 10px 0;
+  background: cornflowerblue;
+}
+header nav .nav-icon li > a i {
+  width: 50px;
+  height: 50px;
+  display: block;
+  background: red;
+  margin: auto;
+}
+
 /*slide section style*/
 .slide {
   width: 100%;
   height: 570px;
   border: 1px solid #000;
 }
+.slide .slide-box {
+  height: 100%;
+  background: url(/renewal/img/slide/port_banner.jpeg) no-repeat center center;
+  background-size: cover;
+}
 
 /*font-service section style*/
 .font-service {
   width: 100%;
-  height: 100px;
+  height: auto;
   border: 1px solid #000;
+  text-align: center;
+  padding: 20px 0;
+}
+.font-service h4 img {
+  display: block;
+  margin: auto;
+  height: 60px;
+}
+.font-service .service-product {
+  padding: 60px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1280px;
+  margin: auto;
+}
+.font-service .service-product > div {
+  width: calc(50% - 25px);
+}
+.font-service .service-product > div.brand-pd {
+  display: flex;
+  flex-direction: column;
+  background: #6c93f9;
+}
+.font-service .service-product > div.select-pd {
+  display: flex;
+  flex-direction: column;
+  background: #fdbb60;
+}
+.font-service .service-product > div img {
+  width: 100%;
+}
+.font-service .service-product > div .text-box-pd {
+  padding: 25px 40px;
+  text-align: start;
+  color: #fff;
+}
+.font-service .service-product > div .text-box-pd h3 {
+  font-size: 30px;
+  line-height: 1.5;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #fff;
+}
+.font-service .service-product > div .text-box-pd p {
+  font-size: 20px;
+  line-height: 1.6;
+  color: #fff;
+}
+.font-service .service-product > div span a {
+  padding: 0px 40px 25px 40px;
+  text-align: start;
+  display: block;
+  color: #fff;
 }
 
 /*banner section style*/
@@ -60,26 +157,39 @@ header nav ul li > a {
   width: 100%;
   height: auto;
   border: 1px solid #000;
+  text-align: center;
 }
 .banner .ba {
   height: 570px;
 }
 .banner .ba > div {
   height: 33.34%;
+  padding: 20px;
+  color: #fff;
 }
-.banner .ba .nemoni2 {
-  background: purple;
+.banner .ba > div.nemoni2 {
+  background: url(/renewal/img/sub_bnr1_bg.jpeg) no-repeat center center;
+  background-size: cover;
 }
-.banner .ba .helvetica-now {
-  background: red;
+.banner .ba > div.helvetica-now {
+  background: url(/renewal/img/sub_bnr2_bg.png) no-repeat center center;
+  background-size: cover;
 }
-.banner .ba .TSC-blackDA {
-  background: orange;
+.banner .ba > div.TSC-blackDA {
+  background: url(/renewal/img/sub_bnr3_bg.jpeg) no-repeat center center;
+  background-size: cover;
+}
+.banner .ba > div img {
+  display: block;
+  margin: auto;
+  height: 60px;
 }
 .banner .more-tab {
   height: 60px;
   background: #000;
   transition: all 0.4s;
+  color: #fff;
+  padding: 20px 0;
 }
 .banner .more-tab:hover {
   height: 100px;
@@ -88,13 +198,98 @@ header nav ul li > a {
 /*our-brandsection style*/
 .our-brand {
   width: 100%;
-  height: 100px;
+  height: auto;
   border: 1px solid #000;
+  text-align: center;
+  padding: 60px 0;
+}
+.our-brand img {
+  display: block;
+  margin: auto;
+  height: 60px;
+}
+.our-brand .brand-slide {
+  height: auto;
+  background: #ccc;
+  padding: 20px 0;
+  margin: 60px;
+}
+.our-brand .brand-slide .slide-line1 {
+  height: 240px;
+  background: #aaa;
+  margin-bottom: 20px;
+}
+.our-brand .brand-slide .slide-line2 {
+  height: 240px;
+  background: #aaa;
 }
 
 /*footer style*/
 footer {
   width: 100%;
-  height: 100px;
+  height: auto;
   background: #000;
+}
+footer .qlick-link ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1440px;
+}
+footer .qlick-link ul li {
+  width: 20%;
+}
+footer .qlick-link ul li > a {
+  width: 100%;
+  height: 100%;
+  padding: 20px 10px;
+  background: cornflowerblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer .qlick-link ul li > a i {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background: red;
+  margin-bottom: 5px;
+}
+footer .last-foot {
+  height: auto;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  color: #fff;
+}
+footer .last-foot a i {
+  display: block;
+  width: 150px;
+  height: 150px;
+  background: red;
+}
+footer .last-foot .aside {
+  border-left: 1px solid #ccc;
+  padding: 10px;
+  margin-left: 10px;
+}
+footer .last-foot .aside .horizontal-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .last-foot .aside .horizontal-nav li {
+  height: auto;
+  text-align: center;
+}
+footer .last-foot .aside .horizontal-nav li a {
+  display: block;
+  color: #fff;
+  padding: 10px;
+}
+footer .last-foot .aside .copyright {
+  line-height: 2;
+  padding: 10px;
 }

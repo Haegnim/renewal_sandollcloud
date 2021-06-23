@@ -1,9 +1,9 @@
 /* Reset Style Code  */
 @font-face {
-  font-family: "todo-logo-for-lecture";
-  src: url("/renewl/font/SDGothicNeoa-fSm.woff") format("woff"),
-    url("/renewl/font/SDGothicNeoa-gBd.woff") format("woff"),
-    url("/renewl/font/SDGothicNeoaUniTTF-cLt.woff") format("woff");
+  font-family: "SDGothicNeo";
+  src: url("/renewal/font/SDGothicNeoa-fSm.woff") format("woff"),
+    url("/renewal/font/SDGothicNeoa-gBd.woff") format("woff"),
+    url("/renewal/font/SDGothicNeoaUniTTF-cLt.woff") format("woff");
 }
 * {
   margin: 0;
@@ -29,7 +29,9 @@ textarea {
 
 /* Main Layout Code  */
 body {
-  font-family: "Roboto", "Noto Sans KR", sans-serif;
+  /* font-family: "Roboto", "Noto Sans KR", sans-serif; */
+  font-family: SDGothicNeo, "Apple SD Gothic Neo", NotoSans, "맑은 고딕",
+    sans-serif;
   font-size: 14px;
 }
 .clearfix:after {
