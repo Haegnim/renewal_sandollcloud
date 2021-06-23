@@ -1,0 +1,98 @@
+.wrapper {
+  width: 100%;
+  height: auto;
+  // 완성이 되면 오버플로우
+  _overflow: hidden;
+}
+/*header style*/
+header {
+  width: 100%;
+  height: 65px;
+  background: red;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .logo {
+    width: 20%;
+    height: 100%;
+    background: chartreuse;
+  }
+  nav {
+    width: 60%;
+    height: 100%;
+    background: yellow;
+    ul {
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      li {
+        width: 12.5%;
+        height: 100%;
+        height: auto;
+        text-align: center;
+        > a {
+          display: block;
+          width: 100%;
+          padding: 17% 0;
+          background: cornflowerblue;
+        }
+        .nav-icon {
+        }
+      }
+    }
+  }
+}
+/*slide section style*/
+.slide {
+  width: 100%;
+  height: 570px;
+  border: 1px solid #000;
+}
+/*font-service section style*/
+.font-service {
+  width: 100%;
+  height: 100px;
+  border: 1px solid #000;
+}
+/*banner section style*/
+.banner {
+  width: 100%;
+  height: auto;
+  border: 1px solid #000;
+  .ba {
+    height: 570px;
+    > div {
+      height: 33.34%;
+    }
+    .nemoni2 {
+      background: purple;
+    }
+    .helvetica-now {
+      background: red;
+    }
+    .TSC-blackDA {
+      background: orange;
+    }
+  }
+  .more-tab {
+    height: 60px;
+    background: #000;
+    transition: all 0.4s;
+    &:hover {
+      height: 100px;
+    }
+  }
+}
+/*our-brandsection style*/
+.our-brand {
+  width: 100%;
+  height: 100px;
+  border: 1px solid #000;
+}
+/*footer style*/
+footer {
+  width: 100%;
+  height: 100px;
+  background: #000;
+}
