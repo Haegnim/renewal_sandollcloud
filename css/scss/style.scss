@@ -3,6 +3,12 @@
   justify-content: space-between;
   align-items: center;
 }
+h4 {
+  margin-bottom: 20px;
+}
+.font-bold {
+  font-weight: bold;
+}
 
 .wrapper {
   width: 100%;
@@ -13,64 +19,85 @@
 .main-bold {
   font-weight: bold;
 }
+icon-img {
+  background: url(/renewal/img/ico_common@2x.png) no-repeat;
+  background-size: 300px 240px;
+}
 
 /*header style*/
-header {
+#header {
+  position: fixed;
+  top: 0;
   width: 100%;
   height: 65px;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.9);
   overflow: hidden;
-  @include display();
-  .logo {
-    width: 20%;
-    height: 100%;
-    background: chartreuse;
+  transform: translateY(0px);
+  transition: all 0.4s;
+  &.sticky {
+    transform: translateY(-66px);
+    transition: all 0.3s ease-in-out;
   }
-  nav {
-    width: 40%;
-    height: 100%;
-    background: yellow;
+
+  .center {
     @include display();
 
-    .nav-tabs {
-      width: 75%;
+    .logo {
+      width: 5%;
+      _height: 100%;
+      _background: chartreuse;
+      text-align: center;
+      font-size: 35px;
+      padding: 20px 0;
+      color: #6c93f9;
+    }
+    nav {
+      width: 45%;
       height: 100%;
+      _background: yellow;
       @include display();
-      li {
-        width: 20%;
+
+      .nav-tabs {
+        width: 75%;
         height: 100%;
-        height: auto;
-        text-align: center;
-        > a {
-          display: block;
-          width: 100%;
+        @include display();
+        li {
+          width: 20%;
           height: 100%;
-          padding: 26px 0;
-          background: cornflowerblue;
+          height: auto;
+          text-align: center;
+          > a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            padding: 21px 0;
+            color: #777;
+            transition: all 0.4s;
+            &:hover {
+              background: rgba(210, 210, 210, 0.3);
+            }
+          }
         }
       }
-    }
-    .nav-icon {
-      width: 25%;
-      height: 100%;
-      @include display();
-      li {
-        width: 33.33%;
+      .nav-icon {
+        width: 25%;
         height: 100%;
-        height: auto;
-        text-align: center;
-        > a {
-          display: block;
-          width: 100%;
+        @include display();
+        li {
+          width: 33.33%;
           height: 100%;
-          padding: 10px 0;
-          background: cornflowerblue;
-          i {
-            width: 50px;
-            height: 50px;
+          height: auto;
+          text-align: center;
+          > a {
             display: block;
-            background: red;
-            margin: auto;
+            width: 100%;
+            height: 100%;
+            padding: 20px 0;
+            font-size: 25px;
+            transition: all 0.4s;
+            &:hover {
+              background: rgba(210, 210, 210, 0.3);
+            }
           }
         }
       }
@@ -81,7 +108,7 @@ header {
 .slide {
   width: 100%;
   height: 570px;
-  border: 1px solid #000;
+  _border: 1px solid #000;
   .slide-box {
     height: 100%;
     background: url(/renewal/img/slide/port_banner.jpeg) no-repeat center center;
@@ -92,14 +119,17 @@ header {
 .font-service {
   width: 100%;
   height: auto;
-  border: 1px solid #000;
+  _border: 1px solid #000;
   text-align: center;
-  padding: 20px 0;
+  padding: 70px 0;
 
-  h4 img {
-    display: block;
-    margin: auto;
-    height: 60px;
+  h4 {
+    margin-bottom: 20px;
+    img {
+      display: block;
+      margin: auto;
+      height: 60px;
+    }
   }
   .service-product {
     padding: 60px 0;
@@ -107,19 +137,31 @@ header {
     max-width: 1280px;
     margin: auto;
     > div {
-      width: calc(50% - 25px);
+      width: calc(50% - 30px);
+      _margin: 30px 15px 0;
+      border: 5px solid #fff;
+      border-collapse: collapse;
       &.brand-pd {
-        display: flex;
-        flex-direction: column;
         background: #6c93f9;
+
+        &:hover {
+          border: 5px solid #6c93f9;
+          .look {
+            visibility: visible;
+          }
+        }
       }
       &.select-pd {
-        display: flex;
-        flex-direction: column;
         background: #fdbb60;
+        &:hover {
+          border: 5px solid #fdbb60;
+          .look {
+            visibility: visible;
+          }
+        }
       }
       img {
-        width: 100%;
+        width: 100.2%;
       }
       .text-box-pd {
         padding: 25px 40px;
@@ -138,12 +180,15 @@ header {
           color: #fff;
         }
       }
-      span {
+      .look {
+        display: block;
+        visibility: hidden;
         a {
           padding: 0px 40px 25px 40px;
           text-align: start;
           display: block;
           color: #fff;
+          font-size: 20px;
         }
       }
     }
@@ -154,13 +199,13 @@ header {
 .banner {
   width: 100%;
   height: auto;
-  border: 1px solid #000;
+  _border: 1px solid #000;
   text-align: center;
   .ba {
     height: 570px;
     > div {
       height: 33.34%;
-      padding: 20px;
+
       color: #fff;
       &.nemoni2 {
         background: url(/renewal/img/sub_bnr1_bg.jpeg) no-repeat center center;
@@ -174,21 +219,58 @@ header {
         background: url(/renewal/img/sub_bnr3_bg.jpeg) no-repeat center center;
         background-size: cover;
       }
-      img {
+      a {
         display: block;
-        margin: auto;
-        height: 60px;
+        padding: 40px 0;
+        img {
+          display: block;
+          margin: auto;
+          height: 60px;
+          margin-top: 30px;
+        }
+        p {
+          color: #fff;
+        }
       }
     }
   }
   .more-tab {
-    height: 60px;
-    background: #000;
-    transition: all 0.4s;
-    color: #fff;
-    padding: 20px 0;
+    _height: 60px;
+    position: relative;
+    border-bottom: 1px solid #dbdbdb;
+    background-color: #f7f7f7;
+    a {
+      display: block;
+      padding: 23px 0px;
+      color: #5f5f5f;
+      transition: all 0.4s;
+      &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        padding-top: 0px;
+        top: 0;
+        left: 50%;
+        margin-left: -16px;
+        width: 33px;
+        height: 10px;
+        _padding: 0 5px;
+        background: url(/renewal/img/main_arr.png) no-repeat;
+        background-size: 33px 10px;
+        opacity: 0;
+        transition-delay: 0.2s;
+      }
+      &:hover:before {
+        opacity: 1;
+        margin-top: 22px;
+      }
+    }
     &:hover {
-      height: 100px;
+      background-color: #021e48;
+      a {
+        padding: 40px 0 20px;
+        color: #cbcbcb;
+      }
     }
   }
 }
@@ -196,7 +278,7 @@ header {
 .our-brand {
   width: 100%;
   height: auto;
-  border: 1px solid #000;
+  _border: 1px solid #000;
   text-align: center;
   padding: 60px 0;
   img {
@@ -219,33 +301,50 @@ header {
       background: #aaa;
     }
   }
+  p > a {
+    color: #173e5d;
+    font-size: 20px;
+  }
 }
 /*footer style*/
 footer {
   width: 100%;
   height: auto;
-  background: #000;
+
   .qlick-link {
+    background: #242424;
     ul {
       @include display();
       max-width: 1440px;
+
       li {
         width: 20%;
         > a {
           width: 100%;
           height: 100%;
-          padding: 20px 10px;
-          background: cornflowerblue;
+          padding: 20px 10px 15px;
           display: flex;
           flex-direction: column;
           align-items: center;
-
+          color: #fff;
+          opacity: 0.5;
+          transition: all 0.3s;
+          &:hover {
+            background: #1e1e1e;
+            opacity: 1;
+          }
           i {
-            display: block;
-            width: 50px;
-            height: 50px;
-            background: red;
-            margin-bottom: 5px;
+            font-size: 40px;
+            padding: 10px;
+
+            // display: block;
+            // width: 50px;
+            // height: 50px;
+            // background: red;
+            // margin-bottom: 5px;
+          }
+          p {
+            padding: 10px 0;
           }
         }
       }
@@ -261,16 +360,19 @@ footer {
     color: #fff;
     a {
       i {
-        display: block;
-        width: 150px;
-        height: 150px;
-        background: red;
+        font-size: 60px;
+        padding: 40px;
+        color: #fff;
+        // display: block;
+        // width: 150px;
+        // height: 150px;
+        // background: red;
       }
     }
     .aside {
       border-left: 1px solid #ccc;
-      padding: 10px;
-      margin-left: 10px;
+      padding: 0 40px;
+      _margin-left: 10px;
       .horizontal-nav {
         @include display();
         li {
@@ -279,13 +381,13 @@ footer {
           a {
             display: block;
             color: #fff;
-            padding: 10px;
+            padding: 0 10px;
           }
         }
       }
       .copyright {
         line-height: 2;
-        padding: 10px;
+        padding-top: 10px;
       }
     }
   }

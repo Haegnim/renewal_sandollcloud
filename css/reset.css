@@ -1,9 +1,39 @@
 /* Reset Style Code  */
-@font-face {
+/* @font-face {
   font-family: "SDGothicNeo";
   src: url("/renewal/font/SDGothicNeoa-fSm.woff") format("woff"),
     url("/renewal/font/SDGothicNeoa-gBd.woff") format("woff"),
     url("/renewal/font/SDGothicNeoaUniTTF-cLt.woff") format("woff");
+} */
+@font-face {
+  font-family: "SDGothicNeo";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://www.sandollcloud.com/static/font/SDGothicNeoaUniTTF-cLt.eot");
+  src: local(※),
+    url("https://www.sandollcloud.com/static/font/SDGothicNeoaUniTTF-cLt.woff")
+      format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "SDGothicNeo";
+  font-style: normal;
+  font-weight: 700;
+  src: url("https://www.sandollcloud.com/static/font/SDGothicNeoa-fSm.eot");
+  src: local(※),
+    url("https://www.sandollcloud.com/static/font/SDGothicNeoa-fSm.woff")
+      format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "SDGothicNeo";
+  font-style: normal;
+  font-weight: 900;
+  src: url("https://www.sandollcloud.com/static/font/SDGothicNeoa-gBd.eot");
+  src: local(※),
+    url("https://www.sandollcloud.com/static/font/SDGothicNeoa-gBd.woff")
+      format("woff");
+  font-display: swap;
 }
 * {
   margin: 0;
@@ -30,9 +60,10 @@ textarea {
 /* Main Layout Code  */
 body {
   /* font-family: "Roboto", "Noto Sans KR", sans-serif; */
-  font-family: SDGothicNeo, "Apple SD Gothic Neo", NotoSans, "맑은 고딕",
-    sans-serif;
+  /* "Apple SD Gothic Neo", NotoSans, "맑은 고딕",sans-serif */
+  font-family: SDGothicNeo;
   font-size: 14px;
+  line-height: 24px;
 }
 .clearfix:after {
   content: "";
