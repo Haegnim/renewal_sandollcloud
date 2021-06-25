@@ -166,6 +166,10 @@ icon-img {
   border-radius: 3px;
   border: 1px solid rgba(0, 0, 0, 0.3);
 }
+.slide .slide-box .progress-bar li a:hover {
+  background: #fff;
+  border: none;
+}
 .slide .slide-box .progress-bar li a span {
   width: 0%;
   height: 100%;
@@ -175,8 +179,13 @@ icon-img {
 }
 
 .gegeBar {
-  -webkit-animation: Bar 3s;
-          animation: Bar 3s;
+  -webkit-animation: Bar 5s;
+          animation: Bar 5s;
+}
+
+.gagaBar {
+  background: transparent;
+  border: transparent;
 }
 
 @-webkit-keyframes Bar {
@@ -366,27 +375,6 @@ icon-img {
   color: #cbcbcb;
 }
 
-@-webkit-keyframes bounce {
-  from {
-    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-            animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    transform: translate3d(0, 0, 0);
-  }
-  to {
-    transform: translate3d(0, -4px, 0);
-  }
-}
-
-@keyframes bounce {
-  from {
-    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-            animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    transform: translate3d(0, 0, 0);
-  }
-  to {
-    transform: translate3d(0, -4px, 0);
-  }
-}
 /*our-brandsection style*/
 .our-brand {
   width: 100%;
@@ -404,16 +392,72 @@ icon-img {
   height: auto;
   background: #ccc;
   padding: 20px 0;
-  margin: 60px;
+  margin: 60px 0;
+  position: relative;
 }
 .our-brand .brand-slide .slide-line1 {
   height: 240px;
+  width: 60%;
   background: #aaa;
+  margin: auto;
   margin-bottom: 20px;
+  position: relative;
+  overflow-x: hidden;
+}
+.our-brand .brand-slide .slide-line1 ul {
+  position: absolute;
+  width: 1920px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.our-brand .brand-slide .slide-line1 ul li {
+  background: chartreuse;
+  margin-right: 20px;
+}
+.our-brand .brand-slide .slide-line1 ul li a {
+  display: block;
+  width: 238px;
+  height: 238px;
 }
 .our-brand .brand-slide .slide-line2 {
   height: 240px;
+  width: 60%;
   background: #aaa;
+  margin: auto;
+  position: relative;
+  overflow-x: hidden;
+}
+.our-brand .brand-slide .slide-line2 ul {
+  position: absolute;
+  width: 1920px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.our-brand .brand-slide .slide-line2 ul li {
+  background: chartreuse;
+  margin-right: 20px;
+}
+.our-brand .brand-slide .slide-line2 ul li a {
+  display: block;
+  width: 238px;
+  height: 238px;
+}
+.our-brand .brand-slide .slide-btn {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  top: calc(50% - 35px);
+  left: calc(50% - 40%);
+}
+.our-brand .brand-slide .slide-btn > a {
+  display: block;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  background: #000;
 }
 .our-brand p > a {
   color: #173e5d;
