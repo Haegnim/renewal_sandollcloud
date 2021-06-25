@@ -168,7 +168,7 @@ icon-img {
   visibility: visible;
 }
 .font-service .service-product > div img {
-  width: 100.2%;
+  width: 100%;
 }
 .font-service .service-product > div .text-box-pd {
   padding: 25px 40px;
@@ -221,9 +221,17 @@ icon-img {
   background: url(/renewal/img/sub_bnr2_bg.png) no-repeat center center;
   background-size: cover;
 }
+.banner .ba > div.helvetica-now img {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
 .banner .ba > div.TSC-blackDA {
   background: url(/renewal/img/sub_bnr3_bg.jpeg) no-repeat center center;
   background-size: cover;
+}
+.banner .ba > div.TSC-blackDA img {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
 }
 .banner .ba > div a {
   display: block;
@@ -250,8 +258,8 @@ icon-img {
   color: #5f5f5f;
   transition: all 0.4s;
 }
-.banner .more-tab a:before {
-  content: "";
+.banner .more-tab a span {
+  _content: "";
   display: block;
   position: absolute;
   padding-top: 0px;
@@ -264,11 +272,14 @@ icon-img {
   background: url(/renewal/img/main_arr.png) no-repeat;
   background-size: 33px 10px;
   opacity: 0;
-  transition-delay: 0.2s;
 }
-.banner .more-tab a:hover:before {
+.banner .more-tab a:hover span, .banner .more-tab a:focus span {
   opacity: 1;
   margin-top: 22px;
+  -webkit-animation: slideInDown 1s ease-in-out 0s infinite;
+          animation: slideInDown 1s ease-in-out 0s infinite;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 .banner .more-tab:hover {
   background-color: #021e48;
@@ -278,6 +289,27 @@ icon-img {
   color: #cbcbcb;
 }
 
+@-webkit-keyframes bounce {
+  from {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(0, -4px, 0);
+  }
+}
+
+@keyframes bounce {
+  from {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(0, -4px, 0);
+  }
+}
 /*our-brandsection style*/
 .our-brand {
   width: 100%;

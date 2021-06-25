@@ -1,0 +1,50 @@
+@font-face {
+  font-family: "sandoll-iconpack";
+  src: url("/renewal/icon/sandoll-iconpack.eot") format("embedded-opentype"),
+    url("/renewal/icon/sandoll-iconpack.woff2") format("woff2"),
+    url("/renewal/icon/sandoll-iconpack.woff") format("woff");
+  /* url("/schedule/font/todo-logo-for-lecture-Regular.ttf") format("truetype"); */
+}
+
+.co {
+  display: inline-block;
+  font-family: sandoll-iconpack;
+  _line-height: 1;
+  text-rendering: auto;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.co-check:before {
+  content: "\0623";
+}
+.co-user:before {
+  content: "\f623";
+}
+.co-shipping:before {
+  content: "\e623";
+}
+.co-logo:before {
+  content: "\d623";
+}
+.co-logoword:before {
+  content: "\b623";
+}
+.co-global:before {
+  content: "\a623";
+}
+.co-raysign:before {
+  content: "\9623";
+}
+.co-around:before {
+  content: "\8623";
+}
+.co-menual:before {
+  content: "\7623";
+}
+.co-list:before {
+  content: "\6623";
+}
+.co-pencil:before {
+  content: "\270f";
+}

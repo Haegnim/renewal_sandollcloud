@@ -161,7 +161,7 @@ icon-img {
         }
       }
       img {
-        width: 100.2%;
+        width: 100%;
       }
       .text-box-pd {
         padding: 25px 40px;
@@ -214,14 +214,21 @@ icon-img {
       &.helvetica-now {
         background: url(/renewal/img/sub_bnr2_bg.png) no-repeat center center;
         background-size: cover;
+        img {
+          animation-delay: 0.2s;
+        }
       }
       &.TSC-blackDA {
         background: url(/renewal/img/sub_bnr3_bg.jpeg) no-repeat center center;
         background-size: cover;
+        img {
+          animation-delay: 0.3s;
+        }
       }
       a {
         display: block;
         padding: 40px 0;
+
         img {
           display: block;
           margin: auto;
@@ -244,8 +251,8 @@ icon-img {
       padding: 23px 0px;
       color: #5f5f5f;
       transition: all 0.4s;
-      &:before {
-        content: "";
+      span {
+        _content: "";
         display: block;
         position: absolute;
         padding-top: 0px;
@@ -258,11 +265,15 @@ icon-img {
         background: url(/renewal/img/main_arr.png) no-repeat;
         background-size: 33px 10px;
         opacity: 0;
-        transition-delay: 0.2s;
+
+        // transition-delay: 0.2s;
       }
-      &:hover:before {
+      &:hover span,
+      &:focus span {
         opacity: 1;
         margin-top: 22px;
+        animation: slideInDown 1s ease-in-out 0s infinite;
+        animation-iteration-count: infinite;
       }
     }
     &:hover {
@@ -272,6 +283,15 @@ icon-img {
         color: #cbcbcb;
       }
     }
+  }
+}
+@keyframes bounce {
+  from {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(0, -4px, 0);
   }
 }
 /*our-brandsection style*/

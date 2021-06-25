@@ -2,13 +2,13 @@
 function headerAni(){
   const header = document.querySelector('#header');
   let headerTop = header.top;
-  console.log(header);  
+  // console.log(header);  
 
   document.addEventListener('scroll', function() {
   let winTop = document.documentElement.scrollTop;
-  console.log(winTop);
+  // console.log(winTop);
   const headerTP = 65;
-  console.log(headerTP);
+  // console.log(headerTP);
 
     if(winTop >= headerTP){
       header.classList.add('sticky');
@@ -19,3 +19,4 @@ function headerAni(){
 }
 headerAni();
 
+new WOW().init();
