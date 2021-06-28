@@ -9,7 +9,7 @@ h4 {
 .wrapper {
   width: 100%;
   height: auto;
-  _overflow: hidden;
+  overflow: hidden;
 }
 
 .main-bold {
@@ -23,13 +23,13 @@ icon-img {
 
 /*header style*/
 #header {
-  _position: fixed;
+  position: fixed;
   top: 0;
   width: 100%;
   padding: 0 20px;
   _height: 65px;
   background: rgba(255, 255, 255, 0.9);
-  overflow: hidden;
+  _overflow: hidden;
   transform: translateY(0px);
   transition: all 0.4s;
   z-index: 9999;
@@ -72,6 +72,23 @@ icon-img {
   height: 100%;
   height: auto;
   text-align: center;
+  position: relative;
+}
+#header .center nav .nav-tabs li #gub {
+  display: none;
+  border: 1px solid #dedede;
+  background: rgba(255, 255, 255, 0.9);
+  position: absolute;
+}
+#header .center nav .nav-tabs li #gub li {
+  width: 190px;
+  text-align: start;
+}
+#header .center nav .nav-tabs li #gub li a {
+  padding: 10px 20px;
+}
+#header .center nav .nav-tabs li:hover #gub {
+  display: block;
 }
 #header .center nav .nav-tabs li > a {
   display: block;
@@ -97,6 +114,26 @@ icon-img {
   height: auto;
   text-align: center;
 }
+#header .center nav .nav-icon li #gub {
+  display: none;
+  border: 1px solid #dedede;
+  background: rgba(255, 255, 255, 0.9);
+  position: absolute;
+}
+#header .center nav .nav-icon li #gub li {
+  width: 90px;
+  text-align: start;
+}
+#header .center nav .nav-icon li #gub li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 10px 20px;
+  font-size: 14px;
+}
+#header .center nav .nav-icon li:hover #gub {
+  display: block;
+}
 #header .center nav .nav-icon li > a {
   display: block;
   width: 100%;
@@ -109,6 +146,145 @@ icon-img {
   background: rgba(210, 210, 210, 0.3);
 }
 
+#mod-header {
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 0 10px;
+}
+#mod-header ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#mod-header ul li {
+  width: 40px;
+  text-align: center;
+}
+#mod-header ul li:nth-child(2) {
+  flex-grow: 1;
+}
+#mod-header ul li:nth-child(2) a i {
+  font-size: 30px;
+  _transform: translateX(20px);
+}
+#mod-header ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 10px 0;
+  line-height: normal;
+}
+#mod-header ul li a i {
+  font-size: 25px;
+  color: #fff;
+}
+#mod-header ul li a i span {
+  margin: auto;
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #fff;
+  border-radius: 10px;
+  transition: all 0.2s ease-in-out;
+}
+#mod-header ul li a i span + span {
+  margin-top: 6px;
+}
+
+#mobile-win {
+  transform: translateX(0);
+}
+
+aside {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.7);
+}
+aside #mod-nav {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: all 0.4s;
+}
+aside #mod-nav .mod-tab {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 70%;
+  height: 100%;
+  background: #031a2e;
+  overflow-y: scroll;
+}
+aside #mod-nav .mod-tab .top-menu {
+  border-bottom: 1px solid #2a3d4e;
+}
+aside #mod-nav .mod-tab .top-menu a {
+  display: block;
+  padding: 15px;
+  line-height: 18px;
+  color: #fff;
+  background: #031a2e;
+}
+aside #mod-nav .mod-tab ul {
+  flex-grow: 1;
+  padding-bottom: 40px;
+}
+aside #mod-nav .mod-tab ul li a {
+  display: block;
+  padding: 15px 20px;
+  color: #e1e1e1;
+  background: #031a2e;
+}
+aside #mod-nav .mod-tab ul li #Mgub {
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-wrap: wrap;
+}
+aside #mod-nav .mod-tab ul li #Mgub li {
+  width: 50%;
+}
+aside #mod-nav .mod-tab ul li #Mgub li a {
+  padding: 9px 10px 9px 25px;
+  color: #dedede;
+  transition: all 0.3s ease;
+  background: rgba(0, 0, 0, 0.5);
+}
+aside #mod-nav .mod-tab .login {
+  display: flex;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+aside #mod-nav .mod-tab .login li {
+  width: 50%;
+  border-top: 1px solid #2a3d4e;
+  border-right: 1px solid #2a3d4e;
+  text-align: center;
+}
+
+@-webkit-keyframes M-menu {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(-70%);
+  }
+}
+
+@keyframes M-menu {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(-70%);
+  }
+}
 /*slide section style*/
 .slide {
   width: 100%;

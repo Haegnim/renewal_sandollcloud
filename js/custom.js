@@ -205,3 +205,5 @@ const boxColor2=[
 //     event.target.style.color = "";
 //   }, 500);
 // }, false);
+
+//mobile header------------------

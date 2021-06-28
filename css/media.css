@@ -81,7 +81,15 @@
     width: 100%;
     border: none;
   }
-
+  .font-service .service-product > div.brand-pd:hover {
+    border: none;
+  }
+  .font-service .service-product > div.select-pd:hover {
+    border: none;
+  }
+  .banner .ba {
+    height: 450px;
+  }
   footer .qlick-link ul li > a p {
     text-align: center;
   }
