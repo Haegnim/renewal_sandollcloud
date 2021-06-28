@@ -62,6 +62,9 @@
 }
 
 @media screen and (max-width: 768px) {
+  #mod-header {
+    display: block;
+  }
   #header {
     display: none;
   }
@@ -77,6 +80,9 @@
   .font-service .service-product {
     flex-direction: column;
   }
+  .font-service .service-product > div .look {
+    visibility: visible;
+  }
   .font-service .service-product > div {
     width: 100%;
     border: none;
@@ -89,6 +95,9 @@
   }
   .banner .ba {
     height: 450px;
+  }
+  footer .qlick-link ul li {
+    width: 25%;
   }
   footer .qlick-link ul li > a p {
     text-align: center;
@@ -110,6 +119,10 @@
 }
 
 @media screen and (max-width: 480px) {
+  p,
+  a {
+    font-size: 12px;
+  }
   #header {
     display: none;
   }
@@ -124,5 +137,43 @@
   }
   .banner .ba > div a img {
     margin-top: 20px;
+  }
+  .slide .slide-box .progress-bar li {
+    padding: 0 4px;
+  }
+  .slide .slide-box .progress-bar li a {
+    width: 25px;
+  }
+  .font-service p {
+    font-size: 12px;
+  }
+  .font-service h4 img {
+    height: 30px;
+  }
+  .our-brand img {
+    height: 30px;
+  }
+  .our-brand p {
+    font-size: 12px;
+  }
+  .our-brand .brand-slide .slide-line1 {
+    height: 180px;
+  }
+  .our-brand .brand-slide .slide-line2 {
+    height: 180px;
+  }
+  .our-brand .brand-slide .slide-line2 ul {
+    justify-content: flex-start;
+  }
+  .our-brand .brand-slide .slide-line1 ul li a {
+    width: 180px;
+    height: 180px;
+  }
+  .our-brand .brand-slide .slide-line2 ul li a {
+    width: 180px;
+    height: 180px;
+  }
+  footer .last-foot .aside {
+    padding: 0;
   }
 }

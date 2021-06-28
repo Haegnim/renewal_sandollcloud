@@ -207,3 +207,31 @@ const boxColor2=[
 // }, false);
 
 //mobile header------------------
+const mbtn = document.querySelector('#threeLine');
+const xbtn = document.querySelector('#XLine');
+const mGlo = document.querySelector('#global');
+const mtab = document.querySelector('#moBnav');
+const mwin = document.querySelector('#mobile-win');
+
+mbtn.addEventListener('click',function(){
+  mtab.style.display = "block";
+  xbtn.style.display = "block";
+  mbtn.style.display = "none";
+  mGlo.style.display = "none";
+  mtab.style.transform = "translateX(0)";
+
+  mwin.style.transform = "translateX(-70%)";
+  
+  console.log('mobile');
+})
+xbtn.addEventListener('click',function(){
+  // mtab.style.display = "none";
+  xbtn.style.display = "none";
+  mbtn.style.display = "block";
+  mGlo.style.display = "block";
+  mtab.style.transform = "translateX(100%)";
+
+  mwin.style.transform = "translateX(0%)";
+  
+  console.log('mobile');
+})

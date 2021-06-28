@@ -145,6 +145,7 @@ icon-img {
   }
 }
 #mod-header {
+  display: none;
   position: fixed;
   width: 100%;
   z-index: 9999;
@@ -196,19 +197,67 @@ icon-img {
 
 #mobile-win {
   transform: translateX(0);
+  transition: all 0.4s;
 }
 aside {
   display: none;
   position: fixed;
   width: 100%;
   height: 100%;
-  z-index: 999;
+  z-index: 90;
+  transform: translateX(70%);
   background: rgba(0, 0, 0, 0.7);
+  transition: all 0.4s;
+
   #mod-nav {
     position: relative;
     width: 100%;
     height: 100%;
+    z-index: 90;
     transition: all 0.4s;
+    overflow-y: hidden;
+    display: flex;
+    .Xbtn {
+      display: flex;
+      position: absolute;
+      justify-content: flex-end;
+      align-items: center;
+      width: 30%;
+      li {
+        width: 56px;
+        text-align: center;
+        padding-top: 4px;
+        a {
+          display: block;
+          width: 100%;
+          height: 100%;
+          padding: 10px 0;
+          i {
+            font-size: 25px;
+            color: #fff;
+
+            span {
+              margin: auto;
+              display: block;
+              width: 24px;
+              height: 2px;
+              background: #fff;
+              border-radius: 10px;
+              transition: all 0.2s ease-in-out;
+              &:nth-child(1) {
+                transform: rotate(90deg);
+              }
+              &:nth-child(2) {
+                transform: translateY(-2px);
+              }
+            }
+          }
+        }
+      }
+    }
+    #XLine {
+      transform: rotate(45deg);
+    }
     .mod-tab {
       position: absolute;
       top: 0;
@@ -216,9 +265,12 @@ aside {
       width: 70%;
       height: 100%;
       background: #031a2e;
-      overflow-y: scroll;
+      overflow-y: hidden;
+      z-index: 90;
       .top-menu {
         border-bottom: 1px solid#2a3d4e;
+        display: flex;
+        justify-content: space-between;
         a {
           display: block;
           padding: 15px;
@@ -258,6 +310,9 @@ aside {
         display: flex;
         margin-bottom: 0;
         padding-bottom: 0;
+        position: absolute;
+        width: 100%;
+        bottom: 0;
         li {
           width: 50%;
           border-top: 1px solid #2a3d4e;
@@ -266,14 +321,6 @@ aside {
         }
       }
     }
-  }
-}
-@keyframes M-menu {
-  from {
-    transform: translateX(0px);
-  }
-  to {
-    transform: translateX(-70%);
   }
 }
 /*slide section style*/
