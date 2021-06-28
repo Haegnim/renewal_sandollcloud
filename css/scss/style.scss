@@ -382,18 +382,21 @@ icon-img {
     position: relative;
     .slide-line1 {
       height: 240px;
-      width: 60%;
+      width: calc((238px + 20px) * 5 - 20px);
       background: #aaa;
       margin: auto;
       margin-bottom: 20px;
       position: relative;
       overflow-x: hidden;
+
       ul {
         position: absolute;
         width: 1920px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        transform: translateX(0px);
+        transition: all 0.4s;
         li {
           background: chartreuse;
           margin-right: 20px;
@@ -407,17 +410,21 @@ icon-img {
     }
     .slide-line2 {
       height: 240px;
-      width: 60%;
+      width: calc((238px + 20px) * 5 - 20px);
       background: #aaa;
       margin: auto;
       position: relative;
       overflow-x: hidden;
+
       ul {
         position: absolute;
         width: 1920px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        transform: translateX(0px);
+        transition: all 0.4s;
+
         li {
           background: chartreuse;
           margin-right: 20px;
@@ -436,7 +443,7 @@ icon-img {
       width: 80%;
       top: calc(50% - 35px);
       left: calc(50% - 40%);
-      > a {
+      > button {
         display: block;
         height: 70px;
         width: 70px;
