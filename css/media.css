@@ -1,2 +1,120 @@
+@media screen and (max-width: 1440px) {
+  .our-brand .brand-slide .slide-line1 {
+    width: calc((238px + 20px) * 4 - 20px);
+  }
+  .our-brand .brand-slide .slide-line2 {
+    width: calc((238px + 20px) * 4 - 20px);
+  }
+  .our-brand .brand-slide .slide-btn {
+    width: 95%;
+    left: calc(50% - 47.5%);
+  }
+}
+@media screen and (max-width: 1280px) {
+  #header .center nav {
+    width: 85%;
+  }
+  .slide {
+    height: 500px;
+  }
+  .slide .slide-box .slide-list li {
+    height: 100%;
+  }
+  .slide .slide-box .slide-list li a img {
+    height: 100%;
+  }
+  .font-service .service-product {
+    max-width: 800px;
+  }
+  .font-service .service-product > div {
+    width: calc(50% - 10px);
+  }
 
-/*# sourceMappingURL=media.css.map */
+  .banner .ba > div a img {
+    width: 100%;
+    height: auto;
+    padding: 0 30px;
+    margin-top: 15px;
+  }
+  .banner .ba > div:nth-child(3) a img {
+    width: 85%;
+  }
+  .our-brand .brand-slide {
+    overflow-x: scroll;
+  }
+  .our-brand .brand-slide::-webkit-scrollbar {
+    display: none;
+  }
+  .our-brand .brand-slide .slide-line1 {
+    width: auto;
+    transform: translateX(100px);
+    height: 238px;
+    overflow: visible;
+  }
+  .our-brand .brand-slide .slide-line2 {
+    width: auto;
+    transform: translateX(100px);
+    overflow: visible;
+  }
+  .our-brand .brand-slide .slide-btn {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #header {
+    display: none;
+  }
+  /* .slide {
+    height: 500px;
+  }
+  .slide .slide-box .slide-list li {
+    height: 100%;
+  }
+  .slide .slide-box .slide-list li a img {
+    height: 100%;
+  } */
+  .font-service .service-product {
+    flex-direction: column;
+  }
+  .font-service .service-product > div {
+    width: 100%;
+    border: none;
+  }
+
+  footer .qlick-link ul li > a p {
+    text-align: center;
+  }
+  footer .qlick-link ul li:nth-child(5) {
+    display: none;
+  }
+  footer .last-foot {
+    flex-direction: column;
+  }
+  footer .last-foot .aside {
+    text-align: center;
+    border-left: none;
+    /* border-top: 1px solid #ccc; */
+  }
+  footer .last-foot a i {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #header {
+    display: none;
+  }
+  .slide {
+    height: 280px;
+  }
+  .banner .ba {
+    height: 400px;
+  }
+  .banner .ba > div a {
+    padding: 26px 0;
+  }
+  .banner .ba > div a img {
+    margin-top: 20px;
+  }
+}
