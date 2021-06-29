@@ -54,7 +54,7 @@ icon-img {
       color: #6c93f9;
     }
     nav {
-      width: 45%;
+      width: 46%;
       height: 100%;
       _background: yellow;
       @include display();
@@ -149,8 +149,14 @@ icon-img {
   position: fixed;
   width: 100%;
   z-index: 9999;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0);
   padding: 0 10px;
+  top: 0;
+  left: 0;
+  &.sticky {
+    transform: translateY(-100%);
+    transition: all 0.3s ease-in-out;
+  }
   ul {
     width: 100%;
     display: flex;
@@ -163,7 +169,7 @@ icon-img {
         flex-grow: 1;
         a i {
           font-size: 30px;
-          _transform: translateX(20px);
+          transform: translateX(20px);
         }
       }
 
@@ -196,7 +202,7 @@ icon-img {
 }
 
 #mobile-win {
-  transform: translateX(0);
+  // transform: translateX(0);
   transition: all 0.4s;
 }
 aside {
@@ -235,7 +241,7 @@ aside {
           i {
             font-size: 25px;
             color: #fff;
-
+            display: block;
             span {
               margin: auto;
               display: block;
@@ -244,19 +250,17 @@ aside {
               background: #fff;
               border-radius: 10px;
               transition: all 0.2s ease-in-out;
+              margin-bottom: -2px;
               &:nth-child(1) {
-                transform: rotate(90deg);
+                transform: rotate(45deg);
               }
               &:nth-child(2) {
-                transform: translateY(-2px);
+                transform: rotate(-45deg);
               }
             }
           }
         }
       }
-    }
-    #XLine {
-      transform: rotate(45deg);
     }
     .mod-tab {
       position: absolute;

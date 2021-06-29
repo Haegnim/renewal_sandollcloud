@@ -117,7 +117,11 @@
     display: none;
   }
 }
-
+@media screen and (max-width: 680px) {
+  .slide {
+    height: 380px;
+  }
+}
 @media screen and (max-width: 480px) {
   p,
   a {
@@ -147,6 +151,21 @@
   .font-service p {
     font-size: 12px;
   }
+  .font-service > p {
+    padding: 0 40px;
+  }
+  .font-service .service-product > div .text-box-pd {
+    padding: 25px 40px 20px;
+  }
+  .font-service .service-product > div .text-box-pd h3 {
+    font-size: 25px;
+  }
+  .font-service .service-product > div .text-box-pd p {
+    font-size: 14px;
+  }
+  .font-service .service-product > div .look a {
+    font-size: 18px;
+  }
   .font-service h4 img {
     height: 30px;
   }
@@ -155,6 +174,10 @@
   }
   .our-brand p {
     font-size: 12px;
+    padding: 0 40px;
+  }
+  .our-brand .brand-slide {
+    margin: 40px 0;
   }
   .our-brand .brand-slide .slide-line1 {
     height: 180px;
@@ -173,7 +196,19 @@
     width: 180px;
     height: 180px;
   }
+  footer .last-foot {
+    padding: 50px 20px;
+  }
   footer .last-foot .aside {
     padding: 0;
+  }
+  footer .qlick-link ul li > a p {
+    line-height: normal;
+  }
+  footer .last-foot .aside .horizontal-nav li a {
+    font-size: 11px;
+  }
+  footer .last-foot .aside .copyright p {
+    font-size: 11px;
   }
 }

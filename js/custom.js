@@ -2,7 +2,6 @@
 // --------- Header top animation ----------------
 function headerAni(){
   const header = document.querySelector('#header');
-  let headerTop = header.top;
   // console.log(header);  
 
   document.addEventListener('scroll', function() {
@@ -20,6 +19,39 @@ function headerAni(){
 }
 headerAni();
 
+//--------- Mobile Header top animation ----------------
+function MheaderAni(){
+  const Mheader = document.querySelector('#mod-header');
+  // console.log(header);  
+  
+
+  // document.addEventListener('scroll', function() {
+  
+  // // console.log(headerTP);
+
+  // });
+  window.onmousewheel = function(e){
+    let MwinTop = document.documentElement.scrollTop;
+    const MheaderTP = 65;
+    if(e.wheelDelta === 120){
+      console.log('wheel up')
+      Mheader.classList.remove('sticky');
+      Mheader.style.background = "rgba(0, 0, 0, 0.7)"
+      
+    }else if(MwinTop <= MheaderTP){
+      Mheader.classList.remove('sticky');
+      Mheader.style.background = "rgba(0, 0, 0, 0.0)";
+      console.log(MwinTop);
+      console.log(MheaderTP);
+  }else{
+    Mheader.classList.add('sticky');
+  };
+  
+   
+  }
+};
+MheaderAni();
+
 new WOW().init();
 
 
@@ -36,13 +68,22 @@ const slidebar = document.querySelectorAll('.progress-bar span');
 const slideA = document.querySelectorAll('.progress-bar a');
 
 // console.log(slidebar);
+
+// if(1024 < slideBoxX){
+//   console.log('resize');
+//   window.addEventListener('resize', function() {
+//     location.reload();
+//     });
+// }
+
+
+
+
+
+
 for(let w = 0; w < slideLi.length;w++){
   slideLi[w].style.width = slideBoxX + "px";
 }
-window.addEventListener('resize', function() {
-  location.reload();
-}, true);
-
 
 let indexNum = -1;
 
