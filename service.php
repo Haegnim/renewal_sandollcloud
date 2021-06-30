@@ -373,36 +373,51 @@
   };
 
   const card = document.querySelectorAll('.card');
-  const cardHoll = document.querySelector('.holl');
+  const cardHoll = document.querySelectorAll('.holl');
   console.log(card);
-  card.addEventListener('mouseover', function() {
-    for (let i = 0; i < filter.length; i++) {
-      const cardColor = filter[i].dataset.color;
-      console.log(cardColor, 'hero');
-      for (let n = 0; n < card.length; n++) {
-        card[n].style.borderColor = cardColor;
-        // cardHoll[n].style.borderLeftColor = cardColor;
-      }
-    }
-    // filterArr.forEach(div => {
-    //   // const jbHref = filter.getAttribute('data-color');
-    //   for (let i = 0; i < 3; i++) {
-    //     const cardColor = div[i].dataset.color;
-    //     card.style.borderColor = cardColor;
-    //     cardHoll.style.borderLeftColor = cardColor;
-    //   }
-    //   // for (let i = 0; i < card.length; i++) {
-    //   //   card[i].style.borderColor = cardColor;
-    //   //   cardHoll[i].style.borderLeftColor = cardColor;
-    //   // }
-    //   console.log(cardColor, 'hero');
+  for (let i = 0; i < card.length; i++) {
+    card[i].addEventListener('mouseover', function() {
+      const cardColor = card[i].closest('.cp-list-wrapper').dataset.color;
+      console.log(cardColor);
 
-    // });
-  }, false);
-  card.addEventListener('mouseout', function() {
-    card.style.border = '';
-    cardHoll.style.borderLeftColor = '';
-  }, false);
+      card[i].style.borderColor = cardColor;
+      cardHoll[i].style.borderLeftColor = cardColor;
+    });
+    card[i].addEventListener('mouseout', function() {
+      card[i].style.border = '';
+      cardHoll[i].style.borderLeftColor = '';
+    }, false);
+  }
+
+  // for (let i = 0; i < filter.length; i++) {
+  //   const cardColor = filter[i].dataset.color;
+  //   for (let j = 0; j < card.length; j++) {
+  //     console.log(cardColor, 'hero');
+  //     card[j].addEventListener('mouseover', function() {
+  //       card[j].style.borderColor = cardColor;
+  //       cardHoll[j].style.borderLeftColor = cardColor;
+  //     });
+  //     card[j].addEventListener('mouseout', function() {
+  //       card[j].style.border = '';
+  //       cardHoll[j].style.borderLeftColor = '';
+  //     }, false);
+  //   };
+  // };
+  // filterArr.forEach(div => {
+  //   // const jbHref = filter.getAttribute('data-color');
+  //   for (let i = 0; i < 3; i++) {
+  //     const cardColor = div[i].dataset.color;
+  //     card.style.borderColor = cardColor;
+  //     cardHoll.style.borderLeftColor = cardColor;
+  //   }
+  //   // for (let i = 0; i < card.length; i++) {
+  //   //   card[i].style.borderColor = cardColor;
+  //   //   cardHoll[i].style.borderLeftColor = cardColor;
+  //   // }
+  //   console.log(cardColor, 'hero');
+
+  // });
+  // }, false);
   </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="/renewal/lib/wow/wow.js"></script>
