@@ -373,21 +373,28 @@
   };
 
   const card = document.querySelectorAll('.card');
+  const cardbtn = document.querySelectorAll('.card .btn-rounded');
   const cardHoll = document.querySelectorAll('.holl');
   console.log(card);
+  console.log(card);
+
   for (let i = 0; i < card.length; i++) {
+    const cardBtnColor = cardbtn[i].closest('.cp-list-wrapper').dataset.color;
+    cardbtn[i].style.background = cardBtnColor;
+
     card[i].addEventListener('mouseover', function() {
       const cardColor = card[i].closest('.cp-list-wrapper').dataset.color;
       console.log(cardColor);
 
       card[i].style.borderColor = cardColor;
       cardHoll[i].style.borderLeftColor = cardColor;
+
     });
     card[i].addEventListener('mouseout', function() {
       card[i].style.border = '';
       cardHoll[i].style.borderLeftColor = '';
     }, false);
-  }
+  };
 
   // for (let i = 0; i < filter.length; i++) {
   //   const cardColor = filter[i].dataset.color;
