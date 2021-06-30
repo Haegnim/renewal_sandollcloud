@@ -705,6 +705,7 @@ aside #mod-nav .mod-tab .login li {
   border: none;
 }
 .our-brand .brand-slide .slide-btn > button.btn-prev {
+  opacity: 0;
   background: #fff;
 }
 .our-brand .brand-slide .slide-btn > button.btn-prev::before {
@@ -741,7 +742,7 @@ aside #mod-nav .mod-tab .login li {
 }
 
 .brand-content {
-  height: 800px;
+  _height: 800px;
 }
 .brand-content .service-tab {
   margin: 135px auto 60px;
@@ -786,6 +787,8 @@ aside #mod-nav .mod-tab .login li {
 .brand-content .service .cp-list .cp-list-wrapper {
   padding: 70px 0 70px;
   border-bottom: 1px solid #ddd;
+  max-width: 1300px;
+  margin: auto;
 }
 .brand-content .service .cp-list .cp-list-wrapper h2 {
   margin-bottom: 45px;
@@ -807,14 +810,14 @@ aside #mod-nav .mod-tab .login li {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  max-width: 1280px;
+  justify-content: flex-start;
   margin: 55px auto 0;
 }
 .brand-content .service .cp-list .cp-list-wrapper .card-list .card {
   position: relative;
   padding: 50px 20px 20px 20px;
-  width: 20%;
+  width: 100%;
+  max-width: 238px;
   margin-right: 22px;
   margin-bottom: 80px;
   height: 358px;
@@ -860,7 +863,7 @@ aside #mod-nav .mod-tab .login li {
   width: 0%;
   height: 0%;
   border-bottom: 30px solid transparent;
-  border-left: 30px solid #ccc;
+  border-left: 29px solid #ccc;
 }
 .brand-content .service .cp-list .cp-list-wrapper .card-list .card .holl::after {
   position: absolute;
