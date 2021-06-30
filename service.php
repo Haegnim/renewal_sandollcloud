@@ -41,7 +41,7 @@
             <li><a href="#">폰트정보</a></li>
             <li><a href="#">무료폰트</a></li>
             <li>
-              <a href="/renewal/service.html">폰트서비스 구매</a>
+              <a href="/renewal/service.php">폰트서비스 구매</a>
               <ul id="Mgub">
                 <li><a href="">브랜드 상품</a></li>
                 <li><a href="">셀렉샵</a></li>
@@ -80,7 +80,7 @@
       <!-- header  -->
       <header id="header" class="bg-w">
         <div class="center">
-          <a href="#" class="logo"><i class="co co-logo"></i></a>
+          <a href="/renewal/index.html" class="logo"><i class="co co-logo"></i></a>
           <nav>
             <ul class="nav-tabs">
               <li><a href="#">폰트정보</a></li>
@@ -141,7 +141,7 @@
       <header id="mod-header">
         <ul>
           <li><a href="#"><i class="co co-shipping"></i></a></li>
-          <li><a href="#"><i class="co co-logo"></i></a></li>
+          <li><a href="/renewal/index.html"><i class="co co-logo"></i></a></li>
           <li id="global"><a href="#"><i class="co co-global"></i></a></li>
           <li id="threeLine"><a href="#">
               <i>
@@ -178,8 +178,11 @@
               // $sandoll = array('산돌', 'sandoll', 'hangeul');
               $cd_arr = array( // 1차원 배열을 3개 갖는 2차원 배열 선언
                 array('산돌', 'sandoll', 'hangeul', '#008ffb'),
-                array('아픽', 'arphic', 'latin', '#ffc805'),
-                array('디나모', 'dinamo', 'chinese', '#f884ee')
+                array('아픽', 'arphic', 'chinese', '#ffc805'),
+                array('카싼디막', 'cason', 'chinese', '#f47556'),
+                array('채희준', 'chae', 'hangeul', '#c1e35b'),
+                array('디나모', 'dinamo', 'latin', '#f884ee'),
+                array('릭스폰트', 'rix', 'hangeul', '#29dde9')
               );
               // echo $cd_arr[0][1];
               //$cd_arr_img = array('sandoll','arphic','dinamo');
@@ -318,8 +321,7 @@
 
   function showAll() {
     filterArr.forEach(div => {
-      div.classList.remove('remove')
-      div.classList.add('show')
+      div.classList.remove('remove');
     });
     tabsArr.forEach(a => {
       a.classList.remove('active')
@@ -372,28 +374,40 @@
     chinese.classList.add('active');
   };
 
+
+  //card hover 때 border color에 data-color로 넣기
+  //card hover 때 btn color에 data-color로 넣기
+  const viewGo = document.querySelectorAll('.cp-list-wrapper > p a');
   const card = document.querySelectorAll('.card');
   const cardbtn = document.querySelectorAll('.card .btn-rounded');
   const cardHoll = document.querySelectorAll('.holl');
   console.log(card);
-  console.log(card);
+  console.log(viewGo);
 
-  for (let i = 0; i < card.length; i++) {
-    const cardBtnColor = cardbtn[i].closest('.cp-list-wrapper').dataset.color;
-    cardbtn[i].style.background = cardBtnColor;
-
-    card[i].addEventListener('mouseover', function() {
-      const cardColor = card[i].closest('.cp-list-wrapper').dataset.color;
-      console.log(cardColor);
-
-      card[i].style.borderColor = cardColor;
-      cardHoll[i].style.borderLeftColor = cardColor;
+  for (let j = 0; j < viewGo.length; j++) {
+    viewGo[j].addEventListener('mouseover', function() {
+      const viewGoColor = viewGo[j].closest('.cp-list-wrapper').dataset.color;
+      viewGo[j].style.color = viewGoColor;
+    });
+    viewGo[j].addEventListener('mouseout', function() {
+      viewGo[j].style.color = '';
 
     });
+  }
+
+  for (let i = 0; i < card.length; i++) {
+    const cardColor = cardbtn[i].closest('.cp-list-wrapper').dataset.color;
+    cardbtn[i].style.background = cardColor;
+
+    card[i].addEventListener('mouseover', function() {
+      card[i].style.borderColor = cardColor;
+      cardHoll[i].style.borderLeftColor = cardColor;
+    });
+
     card[i].addEventListener('mouseout', function() {
       card[i].style.border = '';
       cardHoll[i].style.borderLeftColor = '';
-    }, false);
+    });
   };
 
   // for (let i = 0; i < filter.length; i++) {

@@ -835,9 +835,11 @@ aside #mod-nav .mod-tab .login li {
   text-align: center;
 }
 .brand-content .service .cp-list .cp-list-wrapper h2 img {
-  height: 40px;
+  height: 50px;
   max-width: 200px;
   margin: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .brand-content .service .cp-list .cp-list-wrapper > p {
   text-align: center;
@@ -868,6 +870,9 @@ aside #mod-nav .mod-tab .login li {
   height: 358px;
   border: 1px solid #ccc;
   background: #f8f8f8;
+}
+.brand-content .service .cp-list .cp-list-wrapper .card-list .card:first-child .holl, .brand-content .service .cp-list .cp-list-wrapper .card-list .card:nth-child(6) .holl {
+  left: -2px;
 }
 .brand-content .service .cp-list .cp-list-wrapper .card-list .card:hover {
   transform: translateY(-10px);
@@ -907,7 +912,7 @@ aside #mod-nav .mod-tab .login li {
 .brand-content .service .cp-list .cp-list-wrapper .card-list .card .holl {
   position: absolute;
   top: -1px;
-  left: -2px;
+  left: -1px;
   width: 0%;
   height: 0%;
   border-bottom: 30px solid transparent;
