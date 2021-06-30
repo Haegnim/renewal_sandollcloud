@@ -24,6 +24,13 @@ icon-img {
   background-size: 300px 240px;
 }
 
+.remove {
+  display: none;
+}
+.show {
+  display: block;
+}
+
 /*header style*/
 #header {
   position: fixed;
@@ -36,6 +43,9 @@ icon-img {
   transform: translateY(0px);
   transition: all 0.4s;
   z-index: 9999;
+  &.bg-w {
+    border-bottom: 1px solid #ddd;
+  }
   &.sticky {
     transform: translateY(-66px);
     transition: all 0.3s ease-in-out;
@@ -170,6 +180,7 @@ icon-img {
         a i {
           font-size: 30px;
           transform: translateX(20px);
+          color: #6c93f9;
         }
       }
 
@@ -743,8 +754,22 @@ aside {
     text-align: center;
     display: flex;
     justify-content: center;
+
     li {
       margin: 0 58px;
+      &.active a {
+        color: #333;
+        font-weight: 900;
+        &:after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 3px;
+          left: 0;
+          bottom: 3px;
+          background: #333;
+        }
+      }
       a {
         font-size: 50px;
         color: #999;
@@ -757,16 +782,23 @@ aside {
     .service_category {
       background: #fff;
       width: 100%;
-      min-width: 1080px;
-      z-index: 9999;
+      // min-width: 1080px;
+      z-index: 99;
+      &.tab-active {
+        position: fixed;
+        top: 0;
+        border-bottom: 1px solid #ddd;
+      }
       ul {
-        border: 1px solid #ddd;
         background: #fff;
         width: 100%;
         margin: 0 auto;
         display: flex;
         justify-content: center;
         max-width: 1280px;
+        &.tab-ul-active {
+          border: 1px solid #ddd;
+        }
         li {
           text-align: center;
           width: 25%;
@@ -775,6 +807,16 @@ aside {
             font-size: 16px;
             padding: 20px 0;
             display: block;
+            transition: all 0.3s;
+            color: #666;
+            &:hover,
+            &:focus {
+              background: rgba(210, 210, 210, 0.4);
+            }
+            &.active {
+              color: #fff;
+              background: #333;
+            }
           }
         }
       }
@@ -785,6 +827,7 @@ aside {
         border-bottom: 1px solid #ddd;
         max-width: 1300px;
         margin: auto;
+
         h2 {
           margin-bottom: 45px;
           text-align: center;
@@ -801,6 +844,10 @@ aside {
             margin: 0 18px;
           }
         }
+        .card-wrap {
+          position: relative;
+          right: -11px;
+        }
         .card-list {
           width: 100%;
           display: flex;
@@ -808,6 +855,7 @@ aside {
           justify-content: flex-start;
           margin: 55px auto 0;
           .card {
+            transition: all 0.3s;
             position: relative;
             padding: 50px 20px 20px 20px;
             width: 100%;
@@ -816,7 +864,12 @@ aside {
             margin-bottom: 80px;
             height: 358px;
             border: 1px solid #ccc;
+            // border: 1px solid;
+            // border-color: attr(data-color color);
             background: #f8f8f8;
+            &:hover {
+              transform: translateY(-10px);
+            }
             p {
               &:nth-child(1) {
                 font-size: 14px;
@@ -854,18 +907,18 @@ aside {
             .holl {
               position: absolute;
               top: -1px;
-              left: -1px;
+              left: -2px;
               width: 0%;
               height: 0%;
               border-bottom: 30px solid transparent;
-              border-left: 29px solid #ccc;
+              border-left: 30px solid #ccc;
               &::after {
                 position: absolute;
                 top: -1px;
                 left: -30px;
                 content: "";
-                width: 0;
-                height: 0;
+                width: 0px;
+                height: 0px;
                 border-bottom: 30px solid transparent;
                 border-left: 30px solid #fff;
               }

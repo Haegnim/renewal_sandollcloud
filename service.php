@@ -78,7 +78,7 @@
     </aside>
     <div id="mobile-win">
       <!-- header  -->
-      <header id="header">
+      <header id="header" class="bg-w">
         <div class="center">
           <a href="#" class="logo"><i class="co co-logo"></i></a>
           <nav>
@@ -160,78 +160,92 @@
       <section class="brand-content">
         <h2 class="blind"></h2>
         <ul class="service-tab">
-          <li><a href="#">Brand</a></li>
+          <li class="active"><a href="#">Brand</a></li>
           <li><a href="#">Select#</a></li>
         </ul>
         <article class="service">
           <div class="service_category">
-            <ul>
-              <li><a href="#">전체 폰트</a></li>
-              <li><a href="#">한글 폰트</a></li>
-              <li><a href="#">라틴 폰트</a></li>
-              <li><a href="#">중문/태국어 폰트</a></li>
+            <ul class="tab-ul-active">
+              <li><a href="#" class="all active">전체 폰트</a></li>
+              <li><a href="#" class="hangeul">한글 폰트</a></li>
+              <li><a href="#" class="latin">라틴 폰트</a></li>
+              <li><a href="#" class="chinese">중문/태국어 폰트</a></li>
             </ul>
           </div>
           <section class="cp-list">
             <?php
               include $_SERVER['DOCUMENT_ROOT']."/connect/db_conn.php";
-              $cd_arr = array('산돌','아픽','디나모');
-              $cd_arr_img = array('sandoll','arphic','dinamo');
-              for($i = 0;$i < count($cd_arr); $i++){
+              // $sandoll = array('산돌', 'sandoll', 'hangeul');
+              $cd_arr = array( // 1차원 배열을 3개 갖는 2차원 배열 선언
+                array('산돌', 'sandoll', 'hangeul', '#008ffb'),
+                array('아픽', 'arphic', 'latin', '#ffc805'),
+                array('디나모', 'dinamo', 'chinese', '#f884ee')
+              );
+              // echo $cd_arr[0][1];
+              //$cd_arr_img = array('sandoll','arphic','dinamo');
+              // for($row = 0; $row < 3; $row++) {
+                for($column = 0; $column < count($cd_arr); $column++){
+                  
+              // for($i = 0;$i < count($cd_arr); $i++){
                 ?>
-            <div class="cp-list-wrapper">
+            <div class="cp-list-wrapper" data-<?=$cd_arr[$column][2]?>="<?=$cd_arr[$column][2]?>"
+              data-color="<?=$cd_arr[$column][3]?>">
 
               <h2>
-                <img src="/renewal/img/logo/r_logo_<?=$cd_arr_img[$i]?>.png" alt="">
+                <img src="/renewal/img/logo/r_logo_<?=$cd_arr[$column][1]?>.png" alt="">
               </h2>
               <p>
-                <a href="#"><?=$cd_arr[$i]?> 보러가기></a>
+                <a href="#"><?=$cd_arr[$column][0]?> 보러가기></a>
                 <a href="#">공식웹사이트 ></a>
               </p>
+              <div class="card-wrap">
+                <ul class="card-list">
 
-              <ul class="card-list">
+                  <!-- // $sl_arr = array('database','thermometer-half','clone','bar-chart-o');
+                  // for($i = 0;$i < count($sl_arr); $i++){  -->
+                  <?php
+                $tain = $cd_arr[$column][0];
+                // echo $tain;
+                 $sql = "SELECT * FROM cd_table WHERE cd_brand='$tain' ORDER BY cd_idx ASC";
+                 $cd_result = mysqli_query($dbConn, $sql);
+                 $cd_num_result = mysqli_num_rows($cd_result);
 
-                <!-- // $sl_arr = array('database','thermometer-half','clone','bar-chart-o');
-                // for($i = 0;$i < count($sl_arr); $i++){  -->
-                <?php
-                $sql = "SELECT * FROM cd_table WHERE cd_brand='$cd_arr[$i]' ORDER BY cd_idx ASC";
-                $cd_result = mysqli_query($dbConn, $sql);
-                $cd_num_result = mysqli_num_rows($cd_result);
-
-                while($cd_row=mysqli_fetch_array($cd_result)){
-                $cd_row_idx = $cd_row['cd_idx'];
-                $cd_row_brand = $cd_row['cd_brand'];
-                $cd_row_product = $cd_row['cd_product'];
-                $cd_row_price_m = $cd_row['cd_price_m'];
-                $cd_row_price_y = $cd_row['cd_price_y'];
-                $cd_row_txt = $cd_row['cd_txt'];
-                $cd_row_argument = $cd_row['cd_argument'];
+                  while($cd_row=mysqli_fetch_array($cd_result)){
+                  $cd_row_idx = $cd_row['cd_idx'];
+                  $cd_row_brand = $cd_row['cd_brand'];
+                  $cd_row_product = $cd_row['cd_product'];
+                  $cd_row_price_m = $cd_row['cd_price_m'];
+                  $cd_row_price_y = $cd_row['cd_price_y'];
+                  $cd_row_txt = $cd_row['cd_txt'];
+                  $cd_row_argument = $cd_row['cd_argument'];
+                  ?>
+                  <li class="card">
+                    <p><?=$cd_row_brand?></p>
+                    <span class='holl'></span>
+                    <p class="one-p">
+                      <img src="/renewal/img/personal.png" alt="">
+                      <b><?=$cd_row_argument?></b>
+                    </p>
+                    <h4><?=$cd_row_product?></h4>
+                    <p class="price">
+                      <?=$cd_row_price_m?><span>/매월</span><br>
+                      <?=$cd_row_price_y?><span>/1년</span><br>
+                    </p>
+                    <p class="txt">
+                      <?=$cd_row_txt?>
+                    </p>
+                    <a href="#" class="btn-rounded">구매하기</a>
+                  </li>
+                  <?php
+                  }
+                
                 ?>
-                <li class="card">
-                  <p><?=$cd_row_brand?></p>
-                  <span class='holl'></span>
-                  <p class="one-p">
-                    <img src="/renewal/img/personal.png" alt="">
-                    <b><?=$cd_row_argument?></b>
-                  </p>
-                  <h4><?=$cd_row_product?></h4>
-                  <p class="price">
-                    <?=$cd_row_price_m?><span>/매월</span><br>
-                    <?=$cd_row_price_y?><span>/1년</span><br>
-                  </p>
-                  <p class="txt">
-                    <?=$cd_row_txt?>
-                  </p>
-                  <a href="#" class="btn-rounded">구매하기</a>
-                </li>
-                <?php
-                }
-              
-              ?>
+              </div>
               </ul>
             </div>
             <?php
-                }     
+                // }
+              }     
               ?>
           </section>
         </article>
@@ -282,7 +296,113 @@
 
   </div>
   <script>
+  //--service page tabs filter-----------------
+  const tabs = document.querySelectorAll('.service_category ul li a');
+  const all = document.querySelector('.all');
+  const hangeul = document.querySelector('.hangeul');
+  const latin = document.querySelector('.latin');
+  const chinese = document.querySelector('.chinese');
 
+  const filter = document.querySelectorAll('.cp-list-wrapper');
+
+  // Turns node list into an array
+  const filterArr = Array.from(filter);
+  const tabsArr = Array.from(tabs);
+  // console.log(filterArr);
+
+  all.addEventListener('click', showAll);
+  hangeul.addEventListener('click', showHangeul);
+  latin.addEventListener('click', showLatin);
+  chinese.addEventListener('click', showChinese);
+
+
+  function showAll() {
+    filterArr.forEach(div => {
+      div.classList.remove('remove')
+      div.classList.add('show')
+    });
+    tabsArr.forEach(a => {
+      a.classList.remove('active')
+    });
+    all.classList.add('active');
+  };
+
+  function showHangeul() {
+    filterArr.forEach(div => {
+      div.classList.remove('remove')
+
+      if (!div.dataset.hangeul) {
+        div.classList.add('remove')
+      };
+
+    });
+    tabsArr.forEach(a => {
+      a.classList.remove('active')
+    });
+    hangeul.classList.add('active');
+  };
+
+  function showLatin() {
+    filterArr.forEach(div => {
+      div.classList.remove('remove')
+
+      if (!div.dataset.latin) {
+        div.classList.add('remove')
+      };
+
+    });
+    tabsArr.forEach(a => {
+      a.classList.remove('active')
+    });
+    latin.classList.add('active');
+  };
+
+  function showChinese() {
+    filterArr.forEach(div => {
+      div.classList.remove('remove')
+
+      if (!div.dataset.chinese) {
+        div.classList.add('remove')
+      };
+
+    });
+    tabsArr.forEach(a => {
+      a.classList.remove('active')
+    });
+    chinese.classList.add('active');
+  };
+
+  const card = document.querySelectorAll('.card');
+  const cardHoll = document.querySelector('.holl');
+  console.log(card);
+  card.addEventListener('mouseover', function() {
+    for (let i = 0; i < filter.length; i++) {
+      const cardColor = filter[i].dataset.color;
+      console.log(cardColor, 'hero');
+      for (let n = 0; n < card.length; n++) {
+        card[n].style.borderColor = cardColor;
+        // cardHoll[n].style.borderLeftColor = cardColor;
+      }
+    }
+    // filterArr.forEach(div => {
+    //   // const jbHref = filter.getAttribute('data-color');
+    //   for (let i = 0; i < 3; i++) {
+    //     const cardColor = div[i].dataset.color;
+    //     card.style.borderColor = cardColor;
+    //     cardHoll.style.borderLeftColor = cardColor;
+    //   }
+    //   // for (let i = 0; i < card.length; i++) {
+    //   //   card[i].style.borderColor = cardColor;
+    //   //   cardHoll[i].style.borderLeftColor = cardColor;
+    //   // }
+    //   console.log(cardColor, 'hero');
+
+    // });
+  }, false);
+  card.addEventListener('mouseout', function() {
+    card.style.border = '';
+    cardHoll.style.borderLeftColor = '';
+  }, false);
   </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="/renewal/lib/wow/wow.js"></script>

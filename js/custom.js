@@ -34,15 +34,15 @@ function MheaderAni(){
     let MwinTop = document.documentElement.scrollTop;
     const MheaderTP = 65;
     if(e.wheelDelta === 120){
-      console.log('wheel up')
+      // console.log('wheel up')
       Mheader.classList.remove('sticky');
       Mheader.style.background = "rgba(0, 0, 0, 0.7)"
       
     }else if(MwinTop <= MheaderTP){
       Mheader.classList.remove('sticky');
       Mheader.style.background = "rgba(0, 0, 0, 0.0)";
-      console.log(MwinTop);
-      console.log(MheaderTP);
+      // console.log(MwinTop);
+      // console.log(MheaderTP);
   }else{
     Mheader.classList.add('sticky');
   };
@@ -52,6 +52,36 @@ function MheaderAni(){
 };
 MheaderAni();
 
+//---------- Service page tab fixed
+function serviceTabFixe(){
+  const svFixe = document.querySelector('.service_category');
+  const svFixeUl = document.querySelector('.service_category ul');
+
+  // console.log('hello');  
+  // console.log(svFixeUl);  
+
+  document.addEventListener('scroll', function() {
+  let winTop = document.documentElement.scrollTop;
+  // console.log(winTop);
+  const tabH = 200;
+  // console.log(headerTP);
+
+    if(winTop >= tabH){
+      svFixe.classList.add('tab-active');
+      svFixeUl.classList.remove('tab-ul-active');
+
+      // console.log('add'); 
+    } else {
+      svFixe.classList.remove('tab-active');
+      svFixeUl.classList.add('tab-ul-active');
+
+      // console.log('remove'); 
+    }
+  });
+}
+serviceTabFixe();
+
+//plugin animation------------------
 new WOW().init();
 
 
@@ -160,7 +190,7 @@ function plusSlides(n){
   showSlidesLine(indexL += n);
 }
 
-console.log(indexL);
+// console.log(indexL);
 const btnPrev = document.querySelector('.btn-prev');
 const btnNext = document.querySelector('.btn-next');
 
@@ -184,7 +214,7 @@ function showSlidesLine(m) {
     slideUL1.style.transform = 'translateX(-' + m*(slideLiLX1+20) +'px)';
     slideUL2.style.transform = 'translateX(-' + m*(slideLiLX1+20) +'px)';
     
-    console.log(m);
+    // console.log(m);
 
 };
 
@@ -282,3 +312,5 @@ xbtn.addEventListener('click',function(){
   
   // console.log('mobile');
 })
+
+

@@ -25,3 +25,8 @@ rgb(255, 119, 0);
 rgb(255, 200, 5);
 rgb(250, 133, 171);
 rgb(194, 123, 255);
+
+      for (let i = 0; i < card.length; i++) {
+        card[i].style.borderColor = cardColor;
+        cardHoll[i].style.borderLeftColor = cardColor;
+      }
