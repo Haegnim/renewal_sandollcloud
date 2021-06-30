@@ -176,9 +176,9 @@ function showSlides() {
     setTimeout(showSlides, 5000);
 };
 
+
+
 // slider 2line-------------------------
-
-
 
 
 let indexL = 0;
@@ -187,12 +187,30 @@ let indexL = 0;
 showSlidesLine(indexL);
 
 function plusSlides(n){
-  showSlidesLine(indexL += n);
+const btnPrev = document.querySelector('.btn-prev');
+const btnNext = document.querySelector('.btn-next');
+
+  let num = indexL += n;
+
+  if(num > 4){
+    indexL = 4
+    btnNext.style.display = 'none';
+  }else if( 0 < num < 4){
+      btnPrev.style.opacity = '100';
+      btnNext.style.display = 'block';
+  }
+  if(num <= 0){
+    indexL = 0
+    btnPrev.style.opacity = '0';
+    btnNext.style.display = 'block';
+  };
+  showSlidesLine(num);
+  console.log(indexL);
+  console.log(num);
 }
 
 // console.log(indexL);
-const btnPrev = document.querySelector('.btn-prev');
-const btnNext = document.querySelector('.btn-next');
+
 
 
 function showSlidesLine(m) {
@@ -203,19 +221,26 @@ function showSlidesLine(m) {
   const slideLiL2 = document.querySelectorAll('.slide-line-list2 li');
   const slideLiLX1 = slideLiL1[1].offsetWidth;
     
-    if(m >= 5){
-      indexL = 4
-      btnNext.style.display = 'none';
-    }else if(m > 0){
-      btnPrev.style.opacity = '100';
-      btnNext.style.display = 'block';
-    }
+  // let leng = m;
+  // if(leng > 6){leng = 6};
+  // console.log(num);
 
-    slideUL1.style.transform = 'translateX(-' + m*(slideLiLX1+20) +'px)';
-    slideUL2.style.transform = 'translateX(-' + m*(slideLiLX1+20) +'px)';
-    
+  // for(let i = 0; i < (m % 7) ;i++){
+  //   btnPrev.style.opacity = '0';
+  //   console.log(i);
+  //   if(i >= 5){
+  //     // indexL = 4
+  //     btnNext.style.display = 'none';
+  //   }
+  //   if(i >= 0){
+      // btnPrev.style.opacity = '100';
+      // btnNext.style.display = 'block';
+      slideUL1.style.transform = 'translateX(-' + m*(slideLiLX1+20) +'px)';
+      slideUL2.style.transform = 'translateX(-' + m*(slideLiLX1+20) +'px)';
+    // }
+
     // console.log(m);
-
+  
 };
 
 boxcolor();
