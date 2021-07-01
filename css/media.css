@@ -10,6 +10,49 @@
     left: calc(50% - 47.5%);
   }
 }
+@media screen and (max-width: 1300px) {
+  .brand-content .service .cp-list .cp-list-wrapper {
+    max-width: 1040px;
+  }
+  .brand-content
+    .service
+    .cp-list
+    .cp-list-wrapper
+    .card-list
+    .card:nth-child(6)
+    .holl {
+    left: -1px;
+  }
+  .brand-content
+    .service
+    .cp-list
+    .cp-list-wrapper
+    .card-list
+    .card:nth-child(6)
+    .holl:after {
+    border-bottom: 30px solid transparent;
+    border-left: 30px solid #fff;
+  }
+  .brand-content
+    .service
+    .cp-list
+    .cp-list-wrapper
+    .card-list
+    .card:nth-child(5)
+    .holl {
+    left: -2px;
+  }
+  .brand-content
+    .service
+    .cp-list
+    .cp-list-wrapper
+    .card-list
+    .card:nth-child(5)
+    .holl:after {
+    border-bottom: 29px solid transparent;
+    border-left: 29px solid #fff;
+  }
+}
 @media screen and (max-width: 1280px) {
   #header .center nav {
     width: 85%;
@@ -59,6 +102,28 @@
   .our-brand .brand-slide .slide-btn {
     display: none;
   }
+
+  .brand-content .service .service_category ul.tab-ul-active {
+    border-left: 0;
+    border-right: 0;
+  }
+}
+
+@media screen and (max-width: 1045px) {
+  .brand-content .service .cp-list .cp-list-wrapper {
+    max-width: none;
+    width: 90%;
+  }
+  .brand-content .service .cp-list .cp-list-wrapper .card-wrap {
+    overflow-x: scroll;
+  }
+  .brand-content .service .cp-list .cp-list-wrapper .card-list {
+    width: 3000px;
+    flex-wrap: nowrap;
+  }
+  .brand-content .service .cp-list .cp-list-wrapper .card-list .card {
+    width: 238px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -96,6 +161,7 @@
   .banner .ba {
     height: 450px;
   }
+
   footer .qlick-link ul li {
     width: 25%;
   }
@@ -196,6 +262,17 @@
     width: 180px;
     height: 180px;
   }
+  .brand-content .service-tab li {
+    margin: 0 36px;
+  }
+  .brand-content .service-tab li a {
+    font-size: 40px;
+  }
+  .brand-content .service .service_category ul li a {
+    font-size: 12px;
+    padding: 15px 0;
+  }
+
   footer .last-foot {
     padding: 50px 20px;
   }

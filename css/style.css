@@ -874,6 +874,10 @@ aside #mod-nav .mod-tab .login li {
 .brand-content .service .cp-list .cp-list-wrapper .card-list .card:first-child .holl, .brand-content .service .cp-list .cp-list-wrapper .card-list .card:nth-child(6) .holl {
   left: -2px;
 }
+.brand-content .service .cp-list .cp-list-wrapper .card-list .card:first-child .holl:after, .brand-content .service .cp-list .cp-list-wrapper .card-list .card:nth-child(6) .holl:after {
+  border-bottom: 29px solid transparent;
+  border-left: 29px solid #fff;
+}
 .brand-content .service .cp-list .cp-list-wrapper .card-list .card:hover {
   transform: translateY(-10px);
 }

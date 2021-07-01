@@ -871,6 +871,10 @@ aside {
             &:first-child .holl,
             &:nth-child(6) .holl {
               left: -2px;
+              &:after {
+                border-bottom: 29px solid transparent;
+                border-left: 29px solid #fff;
+              }
             }
             &:hover {
               transform: translateY(-10px);

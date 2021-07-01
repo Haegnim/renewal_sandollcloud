@@ -182,7 +182,11 @@
                 array('카싼디막', 'cason', 'chinese', '#f47556'),
                 array('채희준', 'chae', 'hangeul', '#c1e35b'),
                 array('디나모', 'dinamo', 'latin', '#f884ee'),
-                array('릭스폰트', 'rix', 'hangeul', '#29dde9')
+                array('릭스폰트', 'rix', 'hangeul', '#29dde9'),
+                array('게아폰트', 'ghea', 'latin', '#ff959a'),
+                array('좋은글씨', 'good', 'hangeul', '#d091f4'),
+                array('한글씨', 'hangul', 'hangeul', '#00b8e6'),
+                array('헬로폰트', 'hello', 'chinese', '#c27bff'),
               );
               // echo $cd_arr[0][1];
               //$cd_arr_img = array('sandoll','arphic','dinamo');
@@ -381,8 +385,8 @@
   const card = document.querySelectorAll('.card');
   const cardbtn = document.querySelectorAll('.card .btn-rounded');
   const cardHoll = document.querySelectorAll('.holl');
-  console.log(card);
-  console.log(viewGo);
+  // console.log(card);
+  // console.log(viewGo);
 
   for (let j = 0; j < viewGo.length; j++) {
     viewGo[j].addEventListener('mouseover', function() {
@@ -410,35 +414,31 @@
     });
   };
 
-  // for (let i = 0; i < filter.length; i++) {
-  //   const cardColor = filter[i].dataset.color;
-  //   for (let j = 0; j < card.length; j++) {
-  //     console.log(cardColor, 'hero');
-  //     card[j].addEventListener('mouseover', function() {
-  //       card[j].style.borderColor = cardColor;
-  //       cardHoll[j].style.borderLeftColor = cardColor;
-  //     });
-  //     card[j].addEventListener('mouseout', function() {
-  //       card[j].style.border = '';
-  //       cardHoll[j].style.borderLeftColor = '';
-  //     }, false);
-  //   };
-  // };
-  // filterArr.forEach(div => {
-  //   // const jbHref = filter.getAttribute('data-color');
-  //   for (let i = 0; i < 3; i++) {
-  //     const cardColor = div[i].dataset.color;
-  //     card.style.borderColor = cardColor;
-  //     cardHoll.style.borderLeftColor = cardColor;
-  //   }
-  //   // for (let i = 0; i < card.length; i++) {
-  //   //   card[i].style.borderColor = cardColor;
-  //   //   cardHoll[i].style.borderLeftColor = cardColor;
-  //   // }
-  //   console.log(cardColor, 'hero');
+  const cardUl = document.querySelectorAll('.card-list');
+  const cardLiX = card[0].offsetWidth;
+  const modwin = window.innerWidth;
+  // console.log(modwin);
+  // console.log(cardLiX);
+  // console.log(filter);
+  if (modwin < 1045) {
 
-  // });
-  // }, false);
+    for (let h = 0; h < cardUl.length; h++) {
+      const cardLiLength = cardUl[h].getElementsByTagName("li");
+      // console.log(cardLiLength);
+      // console.log(cardLiX * cardLiLength.length);
+      // console.log(h);
+      // console.log(cardUl[h]);
+      // console.log(cardUl[h].childNodes);
+
+      // console.log(cardUl[h].childNodes[3]);
+      // console.log(cardUl[h].getElementsByTagName("li.card"));
+
+
+      // console.log(cardUl[h].closest('.cp-list-wrapper'));
+
+      cardUl[h].style.width = cardLiX * cardLiLength.length + 'px';
+    }
+  }
   </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="/renewal/lib/wow/wow.js"></script>
