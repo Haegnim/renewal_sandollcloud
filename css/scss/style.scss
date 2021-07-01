@@ -47,7 +47,7 @@ icon-img {
     border-bottom: 1px solid #ddd;
   }
   &.sticky {
-    transform: translateY(-66px);
+    transform: translateY(-70px);
     transition: all 0.3s ease-in-out;
   }
 
@@ -64,7 +64,7 @@ icon-img {
       color: #6c93f9;
     }
     nav {
-      width: 46%;
+      width: 49%;
       height: 100%;
       _background: yellow;
       @include display();
@@ -158,11 +158,12 @@ icon-img {
   display: none;
   position: fixed;
   width: 100%;
-  z-index: 9999;
+  z-index: 999;
   background: rgba(0, 0, 0, 0);
   padding: 0 10px;
   top: 0;
   left: 0;
+  transition: all 0.4s ease-in-out;
   &.sticky {
     transform: translateY(-100%);
     transition: all 0.3s ease-in-out;
@@ -175,12 +176,24 @@ icon-img {
     li {
       width: 40px;
       text-align: center;
+      &.x-line a i span {
+        // background: red;
+        &:nth-child(1) {
+          transform: rotate(45deg) translate(2px, 5px);
+        }
+        &:nth-child(2) {
+          display: none;
+        }
+        &:nth-child(3) {
+          transform: rotate(-45deg) translateY(-4px);
+        }
+      }
       &:nth-child(2) {
         flex-grow: 1;
         a i {
           font-size: 30px;
           transform: translateX(20px);
-          color: #6c93f9;
+          color: #e0e9ff;
         }
       }
 
@@ -193,7 +206,6 @@ icon-img {
         i {
           font-size: 25px;
           color: #fff;
-
           span {
             margin: auto;
             display: block;
@@ -214,7 +226,7 @@ icon-img {
 
 #mobile-win {
   // transform: translateX(0);
-  transition: all 0.4s;
+  transition: all 0.4s ease-in-out;
 }
 aside {
   display: none;
@@ -222,18 +234,18 @@ aside {
   width: 100%;
   height: 100%;
   z-index: 90;
-  transform: translateX(70%);
-  background: rgba(0, 0, 0, 0.7);
-  transition: all 0.4s;
+  // transform: translateX(70%);
+  // transition: all 0.4s;
 
   #mod-nav {
     position: relative;
     width: 100%;
     height: 100%;
-    z-index: 90;
+    z-index: 91;
     transition: all 0.4s;
     overflow-y: hidden;
     display: flex;
+    transform: translateX(70%);
     .Xbtn {
       display: flex;
       position: absolute;
@@ -338,6 +350,14 @@ aside {
     }
   }
 }
+.m-back {
+  display: none;
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 50;
+}
 /*slide section style*/
 .slide {
   width: 100%;
@@ -367,9 +387,6 @@ aside {
           _height: 570px;
           object-fit: cover;
           object-position: center;
-        }
-        &:nth-child(7) img {
-          transform: translateY(-65px);
         }
       }
     }

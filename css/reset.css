@@ -9,30 +9,24 @@
   font-family: "SDGothicNeo";
   font-style: normal;
   font-weight: 400;
-  src: url("https://www.sandollcloud.com/static/font/SDGothicNeoaUniTTF-cLt.eot");
-  src: local(※),
-    url("https://www.sandollcloud.com/static/font/SDGothicNeoaUniTTF-cLt.woff")
-      format("woff");
+
+  src: local(※), url("/renewal/font/SDGothicNeoaUniTTF-cLt.woff") format("woff");
   font-display: swap;
 }
 @font-face {
   font-family: "SDGothicNeo";
   font-style: normal;
   font-weight: 700;
-  src: url("https://www.sandollcloud.com/static/font/SDGothicNeoa-fSm.eot");
-  src: local(※),
-    url("https://www.sandollcloud.com/static/font/SDGothicNeoa-fSm.woff")
-      format("woff");
+
+  src: local(※), url("/renewal/font/SDGothicNeoa-fSm.woff") format("woff");
   font-display: swap;
 }
 @font-face {
   font-family: "SDGothicNeo";
   font-style: normal;
   font-weight: 900;
-  src: url("https://www.sandollcloud.com/static/font/SDGothicNeoa-gBd.eot");
-  src: local(※),
-    url("https://www.sandollcloud.com/static/font/SDGothicNeoa-gBd.woff")
-      format("woff");
+
+  src: local(※), url("/renewal/font/SDGothicNeoa-gBd.woff") format("woff");
   font-display: swap;
 }
 * {

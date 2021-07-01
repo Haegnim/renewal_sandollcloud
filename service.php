@@ -5,6 +5,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="57x57" href="/renewal/icon/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/renewal/icon/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/renewal/icon/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/renewal/icon/favicon/favicon-16x16.png">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-TileImage" content="/renewal/icon/favicon/ms-icon-144x144.png">
+
+  <meta name="theme-color" content="#ffffff">
   <title>산돌구름renewal</title>
   <!-- Font Awesome -->
   <!-- Google Fonts -->
@@ -22,6 +30,8 @@
 
 <body>
   <div class="wrapper">
+    <!-- header  -->
+
     <header id="header" class="bg-w">
       <div class="center">
         <a href="/renewal/index.html" class="logo"><i class="co co-logo"></i></a>
@@ -79,10 +89,12 @@
         </nav>
       </div>
     </header>
-    <header id="mod-header" style="background: rgba(0,0,0,0.6);">
+    <!-- end of header  -->
+    <!-- Mobile header  -->
+    <header id="mod-header" class="m-bg-w">
       <ul>
         <li><a href="#"><i class="co co-shipping"></i></a></li>
-        <li><a href="/renewal/index.html"><i class="co co-logo" style="color: #fff"></i></a></li>
+        <li><a href="/renewal/index.html"><i class="co co-logo"></i></a></li>
         <li id="global"><a href="#"><i class="co co-global"></i></a></li>
         <li id="threeLine" onclick=mob(1)><a href="#">
             <i>
@@ -93,6 +105,8 @@
           </a></li>
       </ul>
     </header>
+    <!-- End of Mobile header  -->
+    <!-- Mobile nav  -->
     <aside id="moBnav">
       <section id='mod-nav'>
         <nav class="mod-tab">
@@ -139,16 +153,9 @@
         </nav>
       </section>
     </aside>
+    <!-- End of Mobile nav  -->
+    <div class="m-back"></div>
     <div id="mobile-win">
-      <!-- header  -->
-
-      <!-- end of header  -->
-      <!-- Mobile header  -->
-
-
-
-
-      <!-- End of Mobile header  -->
       <!-- brand-content section  -->
       <section class="brand-content">
         <h2 class="blind"></h2>
@@ -180,6 +187,8 @@
                 array('좋은글씨', 'good', 'hangeul', '#d091f4'),
                 array('한글씨', 'hangul', 'hangeul', '#00b8e6'),
                 array('헬로폰트', 'hello', 'chinese', '#c27bff'),
+                array('로그인디자인', 'login', 'hangeul', '#ff7de2'),
+                array('모노타입', 'mono', 'latin', '#00e090'),
               );
               // echo $cd_arr[0][1];
               //$cd_arr_img = array('sandoll','arphic','dinamo');
@@ -255,9 +264,12 @@
       <footer>
         <div class="qlick-link">
           <ul class="center">
-            <li><a href="#"><i class="co co-raysign"></i>
+            <li>
+              <a href="#">
+                <i class="co co-raysign"></i>
                 <p>폰트 라이선스 통합 캠페인</p>
-              </a></li>
+              </a>
+            </li>
             <li><a href="#"><i class="co co-pencil"></i>
                 <p>초중고 지원사업</p>
               </a></li>
@@ -439,7 +451,8 @@
   </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="/renewal/lib/wow/wow.js"></script>
-  <script src="/renewal/js/forphp.js"></script>
+  <script src="/renewal/js/service.js"></script>
+  <script src="/renewal/js/header.js"></script>
 
 </body>
 

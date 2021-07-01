@@ -1,4 +1,10 @@
 @media screen and (max-width: 1440px) {
+  .font-service .service-product {
+    max-width: 1040px;
+  }
+  .font-service .service-product > div {
+    width: calc(50% - 20px);
+  }
   .our-brand .brand-slide .slide-line1 {
     width: calc((238px + 20px) * 4 - 20px);
   }
@@ -67,7 +73,7 @@
     height: 100%;
   }
   .font-service .service-product {
-    max-width: 800px;
+    max-width: 85%;
   }
   .font-service .service-product > div {
     width: calc(50% - 10px);
@@ -143,6 +149,9 @@
     height: 100%;
   } */
   .font-service .service-product {
+    max-width: 100%;
+  }
+  .font-service .service-product {
     flex-direction: column;
   }
   .font-service .service-product > div .look {
@@ -186,6 +195,10 @@
 @media screen and (max-width: 680px) {
   .slide {
     height: 380px;
+  }
+  .brand-content .service-tab li {
+    margin: unset;
+    width: 40%;
   }
   footer .last-foot {
     padding: 50px 30px;
@@ -269,7 +282,8 @@
     height: 180px;
   }
   .brand-content .service-tab li {
-    margin: 0 36px;
+    margin: unset;
+    width: 40%;
   }
   .brand-content .service-tab li a {
     font-size: 40px;

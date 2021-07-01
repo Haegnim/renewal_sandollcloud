@@ -21,6 +21,8 @@ headerAni();
 //--------- Mobile Header top animation ----------------
 function MheaderAni(){
   const Mheader = document.querySelector('#mod-header');
+  const MheaderBGW = document.querySelector('.m-bg-w');
+  const MheaderBGC = document.querySelector('.m-bg-c');
   // console.log(header);  
   
 
@@ -35,11 +37,12 @@ function MheaderAni(){
     if(e.wheelDelta === 120){
       // console.log('wheel up')
       Mheader.classList.remove('sticky');
-      Mheader.style.background = "rgba(0, 0, 0, 0.7)"
+      Mheader.style.background = "rgba(0, 0, 0, 0.6)";
       
     }else if(MwinTop <= MheaderTP){
       Mheader.classList.remove('sticky');
-      // Mheader.style.background = "rgba(0, 0, 0, 0.0)";
+      MheaderBGC.style.background = "rgba(0, 0, 0, 0.0)";
+      MheaderBGW.style.background = "rgba(0, 0, 0, 0.6)";
       // console.log(MwinTop);
       // console.log(MheaderTP);
   }else{
@@ -51,72 +54,14 @@ function MheaderAni(){
 };
 MheaderAni();
 
-//---------- Service page tab fixed
-function serviceTabFixe(){
-  const svFixe = document.querySelector('.service_category');
-  const svFixeUl = document.querySelector('.service_category ul');
-
-  // console.log('hello');  
-  // console.log(svFixeUl);  
-
-  document.addEventListener('scroll', function() {
-  let winTop = document.documentElement.scrollTop;
-  // console.log(winTop);
-  const tabH = 200;
-  // console.log(headerTP);
-
-    if(winTop >= tabH){
-      svFixe.classList.add('tab-active');
-      svFixeUl.classList.remove('tab-ul-active');
-
-      // console.log('add'); 
-    } else {
-      svFixe.classList.remove('tab-active');
-      svFixeUl.classList.add('tab-ul-active');
-
-      // console.log('remove'); 
-    }
-  });
-}
-serviceTabFixe();
-
-//plugin animation------------------
-new WOW().init();
-
-
-
-
-
 //mobile header------------------
-
-
 const mbtn = document.querySelector('#threeLine');
-const xbtn = document.querySelector('#XLine');
-const mGlo = document.querySelector('#global');
-const mtab = document.querySelector('#moBnav');
+const mbg = document.querySelector('.m-back');
+const moBa = document.querySelector('#moBnav');
+const modNav = document.querySelector('#mod-nav');
 const mwin = document.querySelector('#mobile-win');
 const mH= document.querySelector('#mod-header');
 
-// mbtn.addEventListener('click',function(){
-
-  
-//   // console.log('mobile');
-// })
-
-// mbtn.addEventListener('click',function(){
-
-//   // mtab.style.display = "none";
-//   // xbtn.style.display = "none";
-//   // mbtn.style.display = "block";
-//   // mGlo.style.display = "block";
-//   // mtab.style.transform = "translateX(-100%)";
-
-//   // mwin.style.transform = "translateX(0%)";
-//   // mH.style.transform = "translateX(-70%)";
-
-  
-//   console.log('mobile');
-// })
 let index = 1;
 function mob(m){
  
@@ -127,17 +72,39 @@ function mob(m){
   console.log(num);
 
   if(num == 0){
-    mtab.style.display = "block";
-    mtab.style.transform = "translateX(0)";
-  
+    mbg.style.display = "block";
+    moBa.style.display = "block";
+
+    mbtn.classList.add("x-line");
+    modNav.style.transform = "translateX(0)";
+    // Mwrap.style.transform = "translateX(-70%)";
     mwin.style.transform = "translateX(-70%)";
     mH.style.transform = "translateX(-70%)";
   }
   if(num == 1){
-    mtab.style.display = "none";
-    mtab.style.transform = "translateX(100%)";
-  
+    mbtn.classList.remove('x-line');
+    moBa.style.display = "none";
+
+    mbg.style.display = "none";
+    modNav.style.transform = "translateX(70%)";
+    // Mwrap.style.transform = "translateX(0%)";
     mwin.style.transform = "translateX(0%)";
     mH.style.transform = "translateX(0%)";
+  };
+}
+
+footerChange();
+  window.addEventListener('resize', function() {
+
+    footerChange();
+  });
+function footerChange() {
+  const modW = window.innerWidth;
+  if (modW < 1045) {
+  const footerTxt = document.querySelectorAll(".qlick-link ul li > a p");
+  console.log(footerTxt);
+  footerTxt[0].innerText="라이선스 캠페인"; 
+  footerTxt[3].innerText="폰트 라이선스"; 
+
   }
 }
