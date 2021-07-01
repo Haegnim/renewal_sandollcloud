@@ -1,5 +1,44 @@
 
+function MheaderAni(){
 
+  let beforeMwinTop = document.documentElement.scrollTop;
+
+  document.addEventListener('scroll', function() {
+    const Mheader = document.querySelector('#mod-header');
+    const MheaderBGW = document.querySelector('.m-bg-w');
+    const MheaderBGC = document.querySelector('.m-bg-c');
+    let afterMwinTop = document.documentElement.scrollTop;
+    const MheaderTP = 65;
+    if(afterMwinTop < 50){
+      console.log('head');
+      Mheader.classList.remove('sticky');
+      MheaderBGC.style.background = "rgba(0, 0, 0, 0.0)";
+    }
+    if(afterMwinTop > 50){
+      // console.log('wheel up')
+      if(beforeMwinTop < afterMwinTop ){
+        // 스크롤 아래로 
+        Mheader.classList.add('sticky');
+      } else {
+        // 스크롤 위로
+      console.log('down');
+      console.log('up');
+      Mheader.classList.remove('sticky');
+      Mheader.style.background = "rgba(0, 0, 0, 0.6)";  
+      }
+
+    } else {
+        // 평상 시
+
+      console.log('normal');
+
+    }
+    beforeMwinTop = afterMwinTop;
+    
+
+  });
+};
+MheaderAni();
 
 
 //plugin animation------------------

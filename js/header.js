@@ -19,40 +19,41 @@ function headerAni(){
 headerAni();
 
 //--------- Mobile Header top animation ----------------
-function MheaderAni(){
-  const Mheader = document.querySelector('#mod-header');
-  const MheaderBGW = document.querySelector('.m-bg-w');
-  const MheaderBGC = document.querySelector('.m-bg-c');
-  // console.log(header);  
+// function MheaderAni(){
+
+//   // console.log(header);  
   
 
-  // document.addEventListener('scroll', function() {
+//   // document.addEventListener('scroll', function() {
   
-  // // console.log(headerTP);
+//   // // console.log(headerTP);
 
-  // });
-  window.onmousewheel = function(e){
-    let MwinTop = document.documentElement.scrollTop;
-    const MheaderTP = 65;
-    if(e.wheelDelta === 120){
-      // console.log('wheel up')
-      Mheader.classList.remove('sticky');
-      Mheader.style.background = "rgba(0, 0, 0, 0.6)";
+//   // });
+//   document.addEventListener('scroll', function(e) {
+//     const Mheader = document.querySelector('#mod-header');
+//     const MheaderBGW = document.querySelector('.m-bg-w');
+//     const MheaderBGC = document.querySelector('.m-bg-c');
+//     let MwinTop = document.documentElement.scrollTop;
+//     const MheaderTP = 65;
+//     if(e.wheelDelta === 120){
+//       // console.log('wheel up')
+//       Mheader.classList.remove('sticky');
+//       Mheader.style.background = "rgba(0, 0, 0, 0.6)";
       
-    }else if(MwinTop <= MheaderTP){
-      Mheader.classList.remove('sticky');
-      MheaderBGC.style.background = "rgba(0, 0, 0, 0.0)";
-      MheaderBGW.style.background = "rgba(0, 0, 0, 0.6)";
-      // console.log(MwinTop);
-      // console.log(MheaderTP);
-  }else{
-    Mheader.classList.add('sticky');
-  };
+//     }else if(MwinTop <= MheaderTP){
+//       Mheader.classList.remove('sticky');
+//       MheaderBGC.style.background = "rgba(0, 0, 0, 0.0)";
+//       MheaderBGW.style.background = "rgba(0, 0, 0, 0.6)";
+//       // console.log(MwinTop);
+//       // console.log(MheaderTP);
+//   }else{
+//     Mheader.classList.add('sticky');
+//   };
   
    
-  }
-};
-MheaderAni();
+//   });
+// };
+// MheaderAni();
 
 //mobile header------------------
 const mbtn = document.querySelector('#threeLine');

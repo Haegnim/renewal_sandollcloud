@@ -292,16 +292,24 @@
     font-size: 12px;
     padding: 15px 0;
   }
-
+  footer .last-foot .aside .horizontal-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
   footer .last-foot {
     padding: 50px 20px;
   }
   footer .last-foot .aside {
     padding: 0;
   }
+  footer .qlick-link ul li > a {
+    padding: 20px 0 15px;
+  }
   footer .qlick-link ul li > a p {
     line-height: normal;
+    font-size: 0.75rem;
   }
+
   footer .last-foot .aside .horizontal-nav li a {
     font-size: 11px;
   }
