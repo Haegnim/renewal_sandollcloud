@@ -22,16 +22,79 @@
 
 <body>
   <div class="wrapper">
+    <header id="header" class="bg-w">
+      <div class="center">
+        <a href="/renewal/index.html" class="logo"><i class="co co-logo"></i></a>
+        <nav>
+          <ul class="nav-tabs">
+            <li><a href="#">폰트정보</a></li>
+            <li>
+              <a href="/renewal/service.php">폰트서비스 구매</a>
+              <ul id="gub">
+                <li><a href="">브랜드 상품</a></li>
+                <li><a href="">셀렉샵</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">구름다리 설치</a>
+              <ul id="gub">
+                <li><a href="">PC 버전</a></li>
+                <li><a href="">Mobile iOS</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">고객지원</a>
+              <ul id="gub">
+                <li><a href="">서비스 매뉴얼</a></li>
+                <li><a href="">자주 묻는 질문</a></li>
+                <li><a href="">1:1 문의</a></li>
+                <li><a href="">공지사항</a></li>
+                <li><a href="">폰트변환 서비스</a></li>
+                <li><a href="">정품인증</a></li>
+                <li><a href="">온라인 견적서</a></li>
+                <li><a href="">이용권 등록</a></li>
+                <li><a href="">제휴 제안</a></li>
+              </ul>
+            </li>
+            <li><a href="#">무료폰트</a></li>
+          </ul>
+          <ul class="nav-icon">
+            <li>
+              <a href="#"><i class="co co-user"></i></a>
+              <ul id="gub">
+                <li><a href="">로그인</a></li>
+                <li><a href="">회원가입</a></li>
+              </ul>
+            </li>
+            <li><a href="#"><i class="co co-shipping"></i></a></li>
+            <li>
+              <a href="#"><i class="co co-global"></i></a>
+              <ul id="gub">
+                <li><a href="">한국어</a></li>
+                <li><a href="">영어</a></li>
+                <li><a href="">일본어</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <header id="mod-header" style="background: rgba(0,0,0,0.6);">
+      <ul>
+        <li><a href="#"><i class="co co-shipping"></i></a></li>
+        <li><a href="/renewal/index.html"><i class="co co-logo" style="color: #fff"></i></a></li>
+        <li id="global"><a href="#"><i class="co co-global"></i></a></li>
+        <li id="threeLine" onclick=mob(1)><a href="#">
+            <i>
+              <span></span>
+              <span></span>
+              <span></span>
+            </i>
+          </a></li>
+      </ul>
+    </header>
     <aside id="moBnav">
       <section id='mod-nav'>
-        <ul class="Xbtn">
-          <li id="gbal"><a href="#"><i class="co co-global"></i></a></li>
-          <li id="XLine"><a href="#">
-              <i>
-                <span></span>
-                <span></span>
-              </i></a></li>
-        </ul>
         <nav class="mod-tab">
           <div class="top-menu">
             <a href="#">로그인이 필요합니다.</a>
@@ -78,80 +141,10 @@
     </aside>
     <div id="mobile-win">
       <!-- header  -->
-      <header id="header" class="bg-w">
-        <div class="center">
-          <a href="/renewal/index.html" class="logo"><i class="co co-logo"></i></a>
-          <nav>
-            <ul class="nav-tabs">
-              <li><a href="#">폰트정보</a></li>
-              <li>
-                <a href="/renewal/service.html">폰트서비스 구매</a>
-                <ul id="gub">
-                  <li><a href="">브랜드 상품</a></li>
-                  <li><a href="">셀렉샵</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#">구름다리 설치</a>
-                <ul id="gub">
-                  <li><a href="">PC 버전</a></li>
-                  <li><a href="">Mobile iOS</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#">고객지원</a>
-                <ul id="gub">
-                  <li><a href="">서비스 매뉴얼</a></li>
-                  <li><a href="">자주 묻는 질문</a></li>
-                  <li><a href="">1:1 문의</a></li>
-                  <li><a href="">공지사항</a></li>
-                  <li><a href="">폰트변환 서비스</a></li>
-                  <li><a href="">정품인증</a></li>
-                  <li><a href="">온라인 견적서</a></li>
-                  <li><a href="">이용권 등록</a></li>
-                  <li><a href="">제휴 제안</a></li>
-                </ul>
-              </li>
-              <li><a href="#">무료폰트</a></li>
-            </ul>
-            <ul class="nav-icon">
-              <li>
-                <a href="#"><i class="co co-user"></i></a>
-                <ul id="gub">
-                  <li><a href="">로그인</a></li>
-                  <li><a href="">회원가입</a></li>
-                </ul>
-              </li>
-              <li><a href="#"><i class="co co-shipping"></i></a></li>
-              <li>
-                <a href="#"><i class="co co-global"></i></a>
-                <ul id="gub">
-                  <li><a href="">한국어</a></li>
-                  <li><a href="">영어</a></li>
-                  <li><a href="">일본어</a></li>
-                </ul>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </header>
+
       <!-- end of header  -->
       <!-- Mobile header  -->
 
-      <header id="mod-header">
-        <ul>
-          <li><a href="#"><i class="co co-shipping"></i></a></li>
-          <li><a href="/renewal/index.html"><i class="co co-logo"></i></a></li>
-          <li id="global"><a href="#"><i class="co co-global"></i></a></li>
-          <li id="threeLine"><a href="#">
-              <i>
-                <span></span>
-                <span></span>
-                <span></span>
-              </i>
-            </a></li>
-        </ul>
-      </header>
 
 
 
@@ -420,41 +413,33 @@
   // console.log(modwin);
   // console.log(cardLiX);
   // console.log(filter);
+  // const modwin = window.innerWidth;
   cardX();
   window.addEventListener('resize', function() {
+    // const modwin = window.innerWidth;
+    cardX();
+  });
+
+  function cardX() {
     const modwin = window.innerWidth;
+
     if (modwin < 1045) {
-      cardX();
+      for (let h = 0; h < cardUl.length; h++) {
+        const cardLiLength = cardUl[h].getElementsByTagName("li");
+        cardUl[h].style.width = cardLiX * cardLiLength.length + 'px';
+      };
     } else {
+      console.log('resize');
       for (let h = 0; h < cardUl.length; h++) {
         cardUl[h].style.width = '100%';
       }
     };
-  });
 
-  function cardX() {
-
-    for (let h = 0; h < cardUl.length; h++) {
-      const cardLiLength = cardUl[h].getElementsByTagName("li");
-      // console.log(cardLiLength);
-      // console.log(cardLiX * cardLiLength.length);
-      // console.log(h);
-      // console.log(cardUl[h]);
-      // console.log(cardUl[h].childNodes);
-
-      // console.log(cardUl[h].childNodes[3]);
-      // console.log(cardUl[h].getElementsByTagName("li.card"));
-
-
-      // console.log(cardUl[h].closest('.cp-list-wrapper'));
-
-      cardUl[h].style.width = cardLiX * cardLiLength.length + 'px';
-    };
   };
   </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="/renewal/lib/wow/wow.js"></script>
-  <script src="/renewal/js/custom.js"></script>
+  <script src="/renewal/js/forphp.js"></script>
 
 </body>
 

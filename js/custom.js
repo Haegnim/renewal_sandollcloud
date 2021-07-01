@@ -1,4 +1,3 @@
-
 // --------- Header top animation ----------------
 function headerAni(){
   const header = document.querySelector('#header');
@@ -338,5 +337,3 @@ xbtn.addEventListener('click',function(){
   
   // console.log('mobile');
 })
-
-

@@ -187,6 +187,12 @@
   .slide {
     height: 380px;
   }
+  footer .last-foot {
+    padding: 50px 30px;
+  }
+  footer .last-foot .aside {
+    padding: 0;
+  }
 }
 @media screen and (max-width: 480px) {
   p,
