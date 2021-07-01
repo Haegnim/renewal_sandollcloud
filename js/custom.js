@@ -89,7 +89,10 @@ new WOW().init();
 
 //slide funtion-----------------------
 const slideBox = document.querySelector('.slide-box');
-const slideBoxX = slideBox.offsetWidth;
+// const slideBoxX = slideBox.offsetWidth;
+let slideBoxX;
+
+console.log(slideBoxX);
 
 const slideUl = document.querySelector('.slide-list'); // Slide parent dom
 const slideLi = document.querySelectorAll('.slide-list li');
@@ -105,17 +108,22 @@ const slideA = document.querySelectorAll('.progress-bar a');
 //     location.reload();
 //     });
 // }
+resizing();
+function resizing(){
+  slideBoxX = slideBox.offsetWidth;
+  for(let w = 0; w < slideLi.length;w++){
+    slideLi[w].style.width = slideBoxX + "px";
+  };
+  
+};
 
-
-
-
-
-
-for(let w = 0; w < slideLi.length;w++){
-  slideLi[w].style.width = slideBoxX + "px";
-}
+window.addEventListener('resize', function() {
+  console.log('resize');
+  resizing();
+});
 
 let indexNum = -1;
+
 
 showSlides(indexNum);
 
@@ -139,6 +147,8 @@ function clickBar(n){
 
 function showSlides() {
     // console.log(indexNum);
+    
+
     if(indexNum < slideLi.length){indexNum += 1};
     if(indexNum >= slideLi.length){indexNum = 0};
     slideUl.style.transform = 'translateX(-' + (indexNum*slideBoxX) + 'px)';
@@ -172,8 +182,8 @@ function showSlides() {
 
     };
 
-    
     setTimeout(showSlides, 5000);
+   
 };
 
 
@@ -193,7 +203,7 @@ const btnNext = document.querySelector('.btn-next');
   let num = indexL += n;
 
   if(num > 4){
-    indexL = 4
+    // indexL = 4
     btnNext.style.display = 'none';
   }else if( 0 < num < 4){
       btnPrev.style.opacity = '100';
@@ -205,43 +215,34 @@ const btnNext = document.querySelector('.btn-next');
     btnNext.style.display = 'block';
   };
   showSlidesLine(num);
-  console.log(indexL);
-  console.log(num);
-}
+  // console.log(indexL);
+  // console.log(num);
+};
+
+
+
 
 // console.log(indexL);
 
-
-
 function showSlidesLine(m) {
+const slideUL1 = document.querySelector('.slide-line-list1'); // Slide parent dom
+const slideUL2 = document.querySelector('.slide-line-list2'); // Slide parent dom
+const slideLiL1 = document.querySelectorAll('.slide-line-list1 li');
+const slideLiL2 = document.querySelectorAll('.slide-line-list2 li');
+const slideLiLX1 = slideLiL1[1].offsetWidth;
+let q = m;
+let r = m;
+if(m == 5){q = m - 1;};
+if(r == 5){r = 5;};
 
-  const slideUL1 = document.querySelector('.slide-line-list1'); // Slide parent dom
-  const slideUL2 = document.querySelector('.slide-line-list2'); // Slide parent dom
-  const slideLiL1 = document.querySelectorAll('.slide-line-list1 li');
-  const slideLiL2 = document.querySelectorAll('.slide-line-list2 li');
-  const slideLiLX1 = slideLiL1[1].offsetWidth;
-    
-  // let leng = m;
-  // if(leng > 6){leng = 6};
-  // console.log(num);
+console.log(m);
+  console.log(q);
 
-  // for(let i = 0; i < (m % 7) ;i++){
-  //   btnPrev.style.opacity = '0';
-  //   console.log(i);
-  //   if(i >= 5){
-  //     // indexL = 4
-  //     btnNext.style.display = 'none';
-  //   }
-  //   if(i >= 0){
-      // btnPrev.style.opacity = '100';
-      // btnNext.style.display = 'block';
-      slideUL1.style.transform = 'translateX(-' + m*(slideLiLX1+20) +'px)';
-      slideUL2.style.transform = 'translateX(-' + m*(slideLiLX1+20) +'px)';
-    // }
-
-    // console.log(m);
-  
+      slideUL1.style.transform = 'translateX(-' + r*(slideLiLX1+20) +'px)';
+      slideUL2.style.transform = 'translateX(-' + q*(slideLiLX1+20) +'px)';
 };
+
+
 
 boxcolor();
 // slider line box color

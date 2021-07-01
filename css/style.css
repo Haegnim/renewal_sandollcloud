@@ -646,6 +646,9 @@ aside #mod-nav .mod-tab .login li {
   background: #f4f4f4;
   margin-right: 20px;
 }
+.our-brand .brand-slide .slide-line1 ul li:hover:nth-child(10) {
+  background: #333333;
+}
 .our-brand .brand-slide .slide-line1 ul li a {
   display: block;
   width: 238px;

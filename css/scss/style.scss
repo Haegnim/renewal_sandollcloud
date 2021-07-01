@@ -633,6 +633,11 @@ aside {
         li {
           background: #f4f4f4;
           margin-right: 20px;
+          &:hover {
+            &:nth-child(10) {
+              background: rgb(51, 51, 51);
+            }
+          }
           a {
             display: block;
             width: 238px;
