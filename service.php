@@ -420,25 +420,29 @@
   // console.log(modwin);
   // console.log(cardLiX);
   // console.log(filter);
-  if (modwin < 1045) {
+  window.addEventListener('resize', function() {
+    // location.reload();
+    console.log('resize');
+    if (modwin < 1045) {
 
-    for (let h = 0; h < cardUl.length; h++) {
-      const cardLiLength = cardUl[h].getElementsByTagName("li");
-      // console.log(cardLiLength);
-      // console.log(cardLiX * cardLiLength.length);
-      // console.log(h);
-      // console.log(cardUl[h]);
-      // console.log(cardUl[h].childNodes);
+      for (let h = 0; h < cardUl.length; h++) {
+        const cardLiLength = cardUl[h].getElementsByTagName("li");
+        // console.log(cardLiLength);
+        // console.log(cardLiX * cardLiLength.length);
+        // console.log(h);
+        // console.log(cardUl[h]);
+        // console.log(cardUl[h].childNodes);
 
-      // console.log(cardUl[h].childNodes[3]);
-      // console.log(cardUl[h].getElementsByTagName("li.card"));
+        // console.log(cardUl[h].childNodes[3]);
+        // console.log(cardUl[h].getElementsByTagName("li.card"));
 
 
-      // console.log(cardUl[h].closest('.cp-list-wrapper'));
+        // console.log(cardUl[h].closest('.cp-list-wrapper'));
 
-      cardUl[h].style.width = cardLiX * cardLiLength.length + 'px';
+        cardUl[h].style.width = cardLiX * cardLiLength.length + 'px';
+      }
     }
-  }
+  });
   </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="/renewal/lib/wow/wow.js"></script>
