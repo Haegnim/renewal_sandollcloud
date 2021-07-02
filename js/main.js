@@ -21,10 +21,11 @@ function MheaderAni(){
         Mheader.classList.add('sticky');
       } else {
         // 스크롤 위로
-      console.log('down');
-      console.log('up');
-      Mheader.classList.remove('sticky');
-      Mheader.style.background = "rgba(0, 0, 0, 0.6)";  
+        setTimeout(function(){
+          Mheader.classList.remove('sticky');
+        Mheader.style.background = "rgba(0, 0, 0, 0.6)";  
+        },500);
+        Mheader.classList.add('sticky'); 
       }
 
     } else {
@@ -68,6 +69,7 @@ const slideA = document.querySelectorAll('.progress-bar a');
 //     location.reload();
 //     });
 // }
+let indexNum = -1;
 resizing();
 function resizing(){
   slideBoxX = slideBox.offsetWidth;
@@ -75,14 +77,24 @@ function resizing(){
     slideLi[w].style.width = slideBoxX + "px";
   };
   
+  // setTimeout(showSlides, 5000);
 };
+let timer
 
 window.addEventListener('resize', function() {
-  console.log('resize');
-  resizing();
+  
+  // resizing();
+  clearTimeout(timer);
+
+  timer = setTimeout(function(){
+    resizing();
+    slideUl.style.transform = 'translateX(-' + (indexNum*slideBoxX) + 'px)';
+    // const slideUlbox = slideUl.offsetWidth;
+    // console.log(slideUlbox);
+  } ,300);
 });
 
-let indexNum = -1;
+
 
 
 showSlides(indexNum);

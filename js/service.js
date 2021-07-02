@@ -18,7 +18,7 @@ function MheaderAni(){
     let afterMwinTop = document.documentElement.scrollTop;
     const MheaderTP = 65;
     if(afterMwinTop < 50){
-      console.log('head');
+      // console.log('head');
       Mheader.classList.remove('sticky');
       MheaderBGW.style.background = "rgba(0, 0, 0, 0.6)";
     }
@@ -29,16 +29,21 @@ function MheaderAni(){
         Mheader.classList.add('sticky');
       } else {
         // 스크롤 위로
-      console.log('down');
-      console.log('up');
-      Mheader.classList.remove('sticky');
+      // console.log('down');
+      // console.log('up');
+      setTimeout(function(){
+        Mheader.classList.remove('sticky');
       Mheader.style.background = "rgba(0, 0, 0, 0.6)";  
+      },500);
+      Mheader.classList.add('sticky');
+
+      
       }
 
     } else {
         // 평상 시
 
-      console.log('normal');
+      // console.log('normal');
 
     }
     beforeMwinTop = afterMwinTop;
