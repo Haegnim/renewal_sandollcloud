@@ -30,3 +30,38 @@ rgb(194, 123, 255);
         card[i].style.borderColor = cardColor;
         cardHoll[i].style.borderLeftColor = cardColor;
       }
+
+@font-face {
+  font-family: "SDGothicNeo";
+  font-style: normal;
+  font-weight: 400;
+  /* src: url("https://www.sandollcloud.com/static/font/SDGothicNeoaUniTTF-cLt.eot"); */
+  src: local(※), url("/renewal/font/SDGothicNeoaUniTTF-cLt.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "SDGothicNeo";
+  font-style: normal;
+  font-weight: 700;
+  /* src: url("https://www.sandollcloud.com/static/font/SDGothicNeoa-fSm.eot"); */
+  src: local(※), url("/renewal/font/SDGothicNeoa-fSm.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "SDGothicNeo";
+  font-style: normal;
+  font-weight: 900;
+  /* src: url("https://www.sandollcloud.com/static/font/SDGothicNeoa-gBd.eot"); */
+  src: local(※), url("/renewal/font/SDGothicNeoa-gBd.woff") format("woff");
+  font-display: swap;
+
+fixMe
+1. 슬라이드 리사이즈 0
+2. 슬라이드 loop x
+3. 모바일 탭 아이콘 영역
+4. 브랜드 페이지 반응형 0
+5. 모바일 스크롤 이벤트 알아보기
+6. 모바일 헤더 정렬 re 
+7. 메인 슬라이드 마지막 이미지 수정
+8. 아이콘 로딩 딜레이 0
+9. 슬라이드 함수 수정

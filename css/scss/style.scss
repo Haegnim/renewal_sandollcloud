@@ -995,6 +995,115 @@ aside {
     }
   }
 }
+
+// Font-info page font-menu style code
+.font-list-menu {
+  padding: 65px 0 0 0;
+  width: 100%;
+  // height: 40vh;
+  background: #f3f3f3;
+
+  .list-menu {
+    width: 100%;
+
+    // background: yellow;
+
+    .list-cate {
+      border-bottom: 1px solid #e3e3e3;
+      width: 100%;
+      // padding: 5px 150px 0px;
+      line-height: 40px;
+
+      display: flex;
+      justify-content: center;
+      p {
+        font-weight: bold;
+        width: 8%;
+      }
+      .font-br {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 70%;
+        max-width: 1200px;
+        li {
+          padding: 0;
+          margin: 0 10px;
+
+          a {
+            height: 100%;
+            padding: 15px;
+            position: relative;
+            &::before {
+              content: "";
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              width: 100%;
+              height: 2px;
+              background: #ccc;
+              display: none;
+            }
+          }
+          &:hover a::before {
+            display: block;
+          }
+          &.active {
+            a {
+              color: #008ffb;
+              font-weight: bold;
+              &:before {
+                background: #008ffb;
+                display: block;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//Font-info page brand-info
+.brand-info {
+  width: 100%;
+  height: 60vh;
+  background: #eee;
+}
+.banner {
+  .ba-color:nth-child(1) {
+    background: #0099ff;
+  }
+  .ba-color:nth-child(2) {
+    background: #0077ff;
+  }
+  .ba-color:nth-child(3) {
+    background: #0044ff;
+  }
+}
+.keyfunction {
+  width: 100%;
+  height: 20vh;
+  background: #ccc;
+  form {
+    max-width: 1280px;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    background: #eee;
+  }
+}
+.font-view {
+  width: 100%;
+  height: 500vh;
+  background: #fff;
+  max-width: 1280px;
+  .font-view-box {
+    width: 100%;
+    height: 100%;
+    background: #eee;
+  }
+}
 /*footer style*/
 footer {
   width: 100%;
