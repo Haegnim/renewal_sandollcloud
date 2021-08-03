@@ -3,6 +3,17 @@
   justify-content: space-between;
   align-items: center;
 }
+
+.blind {
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  font-size: 0;
+  line-height: 0;
+}
+
 h4 {
   margin-bottom: 20px;
 }
@@ -80,7 +91,7 @@ icon-img {
           text-align: center;
           position: relative;
 
-          #gub {
+          .gub {
             display: none;
             border: 1px solid #dedede;
             background: rgba(255, 255, 255, 0.9);
@@ -93,7 +104,7 @@ icon-img {
               }
             }
           }
-          &:hover #gub {
+          &:hover .gub {
             display: block;
           }
           > a {
@@ -118,7 +129,7 @@ icon-img {
           height: 100%;
           height: auto;
           text-align: center;
-          #gub {
+          .gub {
             display: none;
             border: 1px solid #dedede;
             background: rgba(255, 255, 255, 0.9);
@@ -135,7 +146,7 @@ icon-img {
               }
             }
           }
-          &:hover #gub {
+          &:hover .gub {
             display: block;
           }
           > a {
@@ -316,7 +327,7 @@ aside {
             color: #e1e1e1;
             background: #031a2e;
           }
-          #Mgub {
+          .Mgub {
             padding: 10px;
             background: rgba(0, 0, 0, 0.5);
             display: flex;
@@ -493,7 +504,7 @@ aside {
         padding: 25px 40px;
         text-align: start;
         color: #fff;
-        h3 {
+        h4 {
           font-size: 30px;
           line-height: 1.5;
           font-weight: bold;

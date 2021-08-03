@@ -39,22 +39,22 @@
           <ul class="nav-tabs">
             <li><a href="#">폰트정보</a></li>
             <li>
-              <a href="/renewal/service.php">폰트서비스 구매</a>
-              <ul id="gub">
-                <li><a href="">브랜드 상품</a></li>
-                <li><a href="">셀렉샵</a></li>
+              <a href="/renewal/pages/service_brand.php">폰트서비스 구매</a>
+              <ul class="gub">
+                <li><a href="/renewal/pages/service_brand.php">브랜드 상품</a></li>
+                <li><a href="/renewal/pages/service_select.php">셀렉샵</a></li>
               </ul>
             </li>
             <li>
               <a href="#">구름다리 설치</a>
-              <ul id="gub">
+              <ul class="gub">
                 <li><a href="">PC 버전</a></li>
                 <li><a href="">Mobile iOS</a></li>
               </ul>
             </li>
             <li>
               <a href="#">고객지원</a>
-              <ul id="gub">
+              <ul class="gub">
                 <li><a href="">서비스 매뉴얼</a></li>
                 <li><a href="">자주 묻는 질문</a></li>
                 <li><a href="">1:1 문의</a></li>
@@ -71,7 +71,7 @@
           <ul class="nav-icon">
             <li>
               <a href="#"><i class="co co-user"></i></a>
-              <ul id="gub">
+              <ul class="gub">
                 <li><a href="">로그인</a></li>
                 <li><a href="">회원가입</a></li>
               </ul>
@@ -79,7 +79,7 @@
             <li><a href="#"><i class="co co-shipping"></i></a></li>
             <li>
               <a href="#"><i class="co co-global"></i></a>
-              <ul id="gub">
+              <ul class="gub">
                 <li><a href="">한국어</a></li>
                 <li><a href="">영어</a></li>
                 <li><a href="">일본어</a></li>
@@ -91,7 +91,7 @@
     </header>
     <!-- end of header  -->
     <!-- Mobile header  -->
-    <header id="mod-header" class="m-bg-w">
+    <div id="mod-header" class="m-bg-w">
       <ul>
         <li><a href="#"><i class="co co-shipping"></i></a></li>
         <li><a href="/renewal/index.html"><i class="co co-logo"></i></a></li>
@@ -104,7 +104,7 @@
             </i>
           </a></li>
       </ul>
-    </header>
+    </div>
     <!-- End of Mobile header  -->
     <!-- Mobile nav  -->
     <aside id="moBnav">
@@ -118,15 +118,15 @@
             <li><a href="#">폰트정보</a></li>
             <li><a href="#">무료폰트</a></li>
             <li>
-              <a href="/renewal/service.php">폰트서비스 구매</a>
-              <ul id="Mgub">
-                <li><a href="">브랜드 상품</a></li>
-                <li><a href="">셀렉샵</a></li>
+              <a href="/renewal/pages/service_brand.php">폰트서비스 구매</a>
+              <ul class="Mgub">
+                <li><a href="/renewal/pages/service_brand.php">브랜드 상품</a></li>
+                <li><a href="/renewal/pages/service_select.php">셀렉샵</a></li>
               </ul>
             </li>
             <li>
               <a href="#">고객지원</a>
-              <ul id="Mgub">
+              <ul class="Mgub">
                 <li><a href="">서비스 매뉴얼</a></li>
                 <li><a href="">자주 묻는 질문</a></li>
                 <li><a href="">1:1 문의</a></li>
@@ -140,7 +140,7 @@
             </li>
             <li>
               <a href="#">구름다리 설치</a>
-              <ul id="Mgub">
+              <ul iclass"Mgub">
                 <li><a href="">PC 버전</a></li>
                 <li><a href="">Mobile iOS</a></li>
               </ul>
@@ -160,8 +160,8 @@
       <section class="brand-content">
         <h2 class="blind"></h2>
         <ul class="service-tab">
-          <li class="active"><a href="#">Brand</a></li>
-          <li><a href="#">Select#</a></li>
+          <li class="active"><a href="/renewal/pages/service_brand.php" class="brand">Brand</a></li>
+          <li><a href="/renewal/pages/service_select.php" class="select">Select#</a></li>
         </ul>
         <article class="service">
           <div class="service_category">
@@ -312,6 +312,7 @@
   </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="/renewal/lib/wow/wow.js"></script>
+  <!-- <script src="/renewal/js/jq_service_ajax.js"></script> -->
   <script src="/renewal/js/service.js"></script>
   <script src="/renewal/js/header.js"></script>
 

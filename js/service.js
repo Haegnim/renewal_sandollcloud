@@ -72,7 +72,7 @@ function serviceTabFixe() {
 serviceTabFixe();
 
 //--service page tabs filter-----------------
-const tabs = document.querySelectorAll(".service_category ul li a");
+const serTabs = document.querySelectorAll(".service_category ul li a");
 const all = document.querySelector(".all");
 const hangeul = document.querySelector(".hangeul");
 const latin = document.querySelector(".latin");
@@ -82,7 +82,7 @@ const filter = document.querySelectorAll(".cp-list-wrapper");
 
 // Turns node list into an array
 const filterArr = Array.from(filter);
-const tabsArr = Array.from(tabs);
+const tabsArr = Array.from(serTabs);
 // console.log(filterArr);
 
 all.addEventListener("click", showAll);
