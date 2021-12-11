@@ -16,7 +16,7 @@
 /webfonts
 /node_modules
 /ex_slide_gage
-
+/ajax
 # ignore all files in the build/ directory
 build/
 
