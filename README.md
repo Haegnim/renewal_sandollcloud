@@ -13,12 +13,12 @@ _기존존의 사사이이트트를 반응응형 사사이이트트로 리리뉴
 
 ## 사이트
 
-- 메메인인페페이이지
+- 메메인인페페이이지<br>
   [🖥 Go site main page](http://haegnim.dothome.co.kr/renewal/)<br>
-- 폰트서비스 구매 페이지
-  [🖥 Go site main page](http://haegnim.dothome.co.kr/renewal/pages/service_brand.php)<br>
+- 폰트서비스 구매 페이지<br>
+  [🖥 Go site font purchase page](http://haegnim.dothome.co.kr/renewal/pages/service_brand.php)<br>
 
- <br>
+  <br>
   <br>
   <br>
 
